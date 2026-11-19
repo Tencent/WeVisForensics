@@ -1285,7 +1285,7 @@ code.tok-obj, code.tok-num, code.tok-none {
   .stat:last-child { grid-column: span 2; border-bottom: 0; }
   .task-grid, .pillars, .headline-grid, .start-grid, .resources, .timeline { grid-template-columns: 1fr; }
   .gallery { columns: 1; }
-  .bar-row { grid-template-columns: 120px 1fr 44px; gap: 8px; }
+  .bar-row { grid-template-columns: 120px 1fr 44px; gap: 6px; }
   .bar-name { font-size: 12px; }
   .demo-stage-wrap { min-height: 300px; padding: 10px; }
   .token-explainer { padding: 22px; }
@@ -1296,9 +1296,15 @@ code.tok-obj, code.tok-num, code.tok-none {
   .stats .stat:last-child { grid-column: auto; }
   .stats .stat:nth-child(3) { border-bottom: 0; }
   .evo-demo { padding: 10px; }
-  .demo-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -10px; padding: 4px 10px 12px; }
+  .demo-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -10px; padding: 4px 10px 12px; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
   .demo-tabs::-webkit-scrollbar { display: none; }
   .demo-tab { flex: none; white-space: nowrap; }
+  .bench { padding: 18px 14px; }
+  .bench-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .bench-tabs::-webkit-scrollbar { display: none; }
+  .bench-tab { flex: none; white-space: nowrap; }
+  .bench-meta { flex-wrap: wrap; gap: 8px 14px; }
+  .bench-meta .dir { white-space: nowrap; }
   .evo-demo .demo-stage-wrap { padding: 10px; }
   .evo-demo .dots { display: none; }
   .evo-demo .term-title { flex: 1 0 100%; }
@@ -1306,6 +1312,11 @@ code.tok-obj, code.tok-num, code.tok-none {
   .ck-label { flex: 1 0 100%; }
   .ck { flex: 1 1 0; flex-direction: column; gap: 2px; padding: 6px 8px; border-radius: 12px; }
   .ck-line { display: none; }
+  .hero-typer { word-break: break-all; }
+  .figure-card { padding: 6px; border-radius: 14px; }
+  .teaser-frame { padding: 6px; border-radius: 16px; }
+  .teaser-frame .scanline { inset: 6px; border-radius: 10px; }
+  .teaser-frame img { border-radius: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
