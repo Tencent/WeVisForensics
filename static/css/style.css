@@ -1292,6 +1292,21 @@ code.tok-obj, code.tok-num, code.tok-none {
   .nav-cta { display: none; }
   .hero-typer { font-size: 12.5px; }
 }
+@media (max-width: 720px) {
+  .stats .stat:last-child { grid-column: auto; }
+  .stats .stat:nth-child(3) { border-bottom: 0; }
+  .evo-demo { padding: 10px; }
+  .demo-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -10px; padding: 4px 10px 12px; }
+  .demo-tabs::-webkit-scrollbar { display: none; }
+  .demo-tab { flex: none; white-space: nowrap; }
+  .evo-demo .demo-stage-wrap { padding: 10px; }
+  .evo-demo .dots { display: none; }
+  .evo-demo .term-title { flex: 1 0 100%; }
+  .ckpt { gap: 6px; padding: 8px 10px; }
+  .ck-label { flex: 1 0 100%; }
+  .ck { flex: 1 1 0; flex-direction: column; gap: 2px; padding: 6px 8px; border-radius: 12px; }
+  .ck-line { display: none; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
