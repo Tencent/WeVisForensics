@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wevisforensics"
+version = "0.1.0"
+description = "Investigator-inspector agent for AI-generated video detection"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["openai>=1.40", "av>=12.0", "pillow>=10.0", "numpy"]
+
+[project.optional-dependencies]
+ocr = ["paddlepaddle>=3.0", "paddleocr>=3.0"]
+audio = [
+    "torch>=2.4",
+    "transformers>=4.45",
+    "huggingface_hub",
+    "soundfile",
+    "faster-whisper>=1.0",
+    "pyannote.audio>=4.0",
+    "clearvoice",
+]
+merge = ["torch>=2.4", "transformers>=4.45", "peft>=0.13"]
+engine = ["vllm>=0.24", "transformers>=4.45", "torch>=2.4"]
+demo = ["gradio>=4.0"]
+
+[tool.setuptools.packages.find]
+include = ["main_agent*", "sub_agents*", "core*", "evaluation*"]

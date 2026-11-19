@@ -1,0 +1,24 @@
+{
+  "image_transport": "base64",
+  "skill_card": "configs/skill_card.json",
+  "endpoints": {
+    "main": {"base_url": "http://127.0.0.1:8000/v1", "model": "main"},
+    "physical_consistency": {"base_url": "http://127.0.0.1:8000/v1", "model": "physical_consistency"},
+    "visual_appearance": {"base_url": "http://127.0.0.1:8000/v1", "model": "visual_appearance"},
+    "common_sense": {"base_url": "http://127.0.0.1:8000/v1", "model": "common_sense"},
+    "ocr_consistency": {"base_url": "http://127.0.0.1:8000/v1", "model": "ocr_consistency"},
+    "asr_analysis": {"base_url": "http://127.0.0.1:8000/v1", "model": "base"}
+  },
+  "ocr": {"device": "auto", "lang": "ch", "ocr_version": "PP-OCRv5"},
+  "audio": {
+    "whisper_model": "Systran/faster-whisper-small",
+    "whisper_device": "cpu",
+    "whisper_compute_type": "int8",
+    "pyannote_model": "pyannote/speaker-diarization-community-1",
+    "mossformer2_model": "alibabasglab/MossFormer2_SS_16K",
+    "audeering_emotion_model": "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+    "audeering_age_gender_model": "audeering/wav2vec2-large-robust-24-ft-age-gender",
+    "device": "auto"
+  },
+  "agent": {"max_steps": 5, "turn_max_tokens": 1024, "response_budget": 12288, "specialist_max_tokens": 500}
+}

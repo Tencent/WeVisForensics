@@ -1,0 +1,895 @@
+[
+ {
+  "id": "20f264bc072e9705eae3",
+  "role": "visual_appearance",
+  "label": "fake",
+  "answer": "fake",
+  "duration": 5.88,
+  "audio": false,
+  "video": "20f264bc072e9705eae3.mp4",
+  "poster": "20f264bc072e9705eae3.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The primary hypothesis is that the sequence may contain localized temporal rendering artifacts rather than a globally unstable scene. The overview shows a continuous-looking interaction in a shop, with two prominent men, a background person, shelves, bottles, and changing gestures. A full-range visual appearance inspection is therefore the most useful first step: it can compare identity, clothing, background geometry, lighting, and especially moving hands across the available duration. I will use the complete 0.0–5.875 second interval so that any anomaly can be distinguished from a single-frame defect or ordinary motion blur. This broad pass should establish whether there is a coherent visual baseline and identify regions that warrant a more targeted physical-structure check. It should also leave open whether any apparent irregularity is merely caused by fast movement, focus, or sampling, which can be tested separately afterward.",
+     "zh": "主要假设是，这段序列可能包含局部的时序渲染伪影，而不是整体不稳定的场景。概览显示这是一段看似连续的店内互动，有两名显眼的男子、一名背景人物、货架、瓶子以及不断变化的手势。因此，首先做全范围的视觉外观检查最有用：它可以在整段时长内比较人物身份、衣物、背景几何、光照，尤其是运动中的双手。我会使用完整的 0.0–5.875 秒区间，以便把任何异常与单帧缺陷或普通运动模糊区分开来。这一轮全面检查应先确立一个连贯的视觉基线，并找出值得做更有针对性的物理结构检查的区域。它也应保留一种可能：任何表面上的不规则可能只是由快速运动、对焦或采样造成的，这一点可以在之后单独检验。"
+    },
+    "skill": "visual_appearance",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 5.88
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The clearest appearance concern is the unusually smooth, rendered quality of the plaid-shirted man's face and exposed forearms during the opening exchange. Across changing expressions and head angles, his cheeks, forehead, and forearms retain broad, nearly textureless tonal gradients, while the shirt's plaid lines, buttons, and nearby wooden shelving remain comparatively distinct. The facial shading has a polished, softly modeled appearance rather than the more irregular surface detail expected at this viewing scale. This is most noticeable as he turns from a broad smile toward a more neutral expression and then looks downward. The concern is localized surface rendering, not a demonstrated change in identity or a disappearing facial feature. Confidence is medium because image processing and compression can also suppress skin texture, and the visible evidence does not establish a separate, unmistakable boundary failure.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "最明显的外观问题是，在开场的交谈中，穿格子衬衫的男子面部和裸露的前臂呈现出异常平滑、渲染般的质感。在不断变化的表情和头部角度下，他的脸颊、额头和前臂始终是大片几乎没有纹理的色调渐变，而衬衫的格子线条、纽扣和旁边的木制货架则相对清晰。面部明暗呈现出一种光滑、柔和塑造的外观，而不是在这一观看尺度下应有的更不规则的表面细节。这一点在他从开怀大笑转为较平静的表情、随后低头时最为明显。这个疑点是局部的表面渲染问题，而不是证明了身份发生变化或某个面部特征消失。置信度为中等，因为图像处理和压缩也可能抹掉皮肤纹理，而且可见证据并不能确立一个独立的、明确无误的边界失效。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The preceding full-range appearance review provides a medium-confidence indication of a localized rendering concern, but it does not by itself establish whether the observed motion obeys stable anatomy. The most informative follow-up is a physical-consistency analysis over the same complete interval, concentrating on the plaid-shirted man’s gestures while also checking whether the other person, background figure, and shop environment remain coherent. This scope is useful because the overview contains repeated hand movements and changing arm positions, where generated imagery can show unstable finger structure even when faces and clothing remain recognizable. The analysis should distinguish ordinary motion blur from persistent changes in digit count, spacing, or contours. Because the available temporal sampling is limited, any finding should be treated as supporting evidence rather than a frame-perfect reconstruction, and the result should be weighed alongside the earlier appearance assessment rather than used in isolation.",
+     "zh": "前面的全范围外观检查给出了一个中等置信度的局部渲染疑点，但它本身并不能确定观察到的运动是否符合稳定的人体结构。最有信息量的后续检查是在同一完整区间内做物理一致性分析，重点关注穿格子衬衫男子的手势，同时检查另一人、背景人物和店内环境是否保持连贯。这个范围很有用，因为概览中有反复的手部动作和不断变化的手臂姿势，生成的画面即便面部和衣物仍可辨认，也可能在这些地方出现不稳定的手指结构。分析应区分普通的运动模糊与手指数量、间距或轮廓的持续变化。由于可用的时间采样有限，任何发现都应作为支持性证据，而不是逐帧精确的重建，并且应与前面的外观评估结合权衡，而不是孤立使用。"
+    },
+    "skill": "physical_consistency",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 5.88
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The plaid-shirted man gestures repeatedly while speaking, but the motion of his hands and forearms is not consistently articulated. Across the middle portion, his hands appear unusually soft and smeared, with finger shapes and wrist contours changing substantially between adjacent poses. The gestures themselves follow a plausible conversational sequence, and there is no clear teleportation or impossible body displacement. However, the repeated hand movement exposes unstable anatomy: fingers become indistinct or appear to merge, and the apparent hand volume changes more than expected from ordinary motion blur. The rest of the bodies and the background remain comparatively stable, making the hand deformation the clearest physical inconsistency. The evidence is strongest during the extended two-handed gesture, although the 2 FPS sampling and moderate image softness limit certainty about the exact motion path.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "穿格子衬衫的男子说话时反复做手势，但他双手和前臂的动作并没有始终保持清晰连贯的关节结构。在中段，他的双手显得异常柔软、模糊，手指形状和手腕轮廓在相邻姿势之间变化很大。手势本身遵循合理的交谈节奏，也没有明显的瞬移或不可能的身体位移。然而，反复的手部动作暴露出不稳定的人体结构：手指变得模糊不清或看起来融合在一起，手的视觉体积变化也超出了普通运动模糊所能解释的程度。身体其余部分和背景相对稳定，这使得手部形变成为最明显的物理不一致。在双手伸展做手势的那段时间证据最强，不过 2 FPS 的采样和中等程度的画面柔化限制了对确切运动轨迹的判断。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The two full-duration analyses leave the main question focused on localized visual and anatomical instability, while also indicating that the scene’s broad composition and conversational motion are comparatively coherent. A targeted text check at 2.0 seconds is a useful final probe because the shop contains signs and bottle labels that could provide an additional consistency cue if readable text is present. This call is intentionally limited to the specified instant and should not be treated as a substitute for temporal analysis. If text is detected, its legibility and stability could help assess whether fine details are rendered consistently; if no text is recoverable, that outcome will be neutral rather than evidence for either class. The result will therefore refine the evidence only within the narrow scope of visible text at that moment, while the earlier appearance and physical findings remain the principal basis for classification.",
+     "zh": "前两项全时长分析把主要问题集中在局部的视觉和人体结构不稳定上，同时也表明场景的整体构图和交谈动作相对连贯。在 2.0 秒处做一次有针对性的文字检查是一个有用的最后探查，因为店里有招牌和瓶身标签，如果存在可读文字，就可以提供额外的一致性线索。这次调用有意只限于指定的时刻，不应被当作时序分析的替代。如果检测到文字，它的清晰度和稳定性可以帮助判断细节是否被一致地渲染；如果无法识别出文字，这个结果将是中性的，不构成任何一方的证据。因此，结果只会在该时刻可见文字这一狭窄范围内补充证据，而前面的外观和物理发现仍是分类的主要依据。"
+    },
+    "skill": "ocr_consistency",
+    "window": {
+     "type": "point",
+     "at": 2.0
+    },
+    "report": {
+     "verdict": "inconclusive",
+     "confidence": "medium",
+     "en": {
+      "text": "Both regions belong to a background sign. Their visible softness prevents reliable assessment of fine letter structure, with no affirmative evidence of warped or degraded glyph formation.",
+      "issues": [
+       "Neither crop provides sufficiently resolved glyph structure for a reliable integrity assessment."
+      ],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "两个区域都属于背景招牌。它们可见的柔化使得无法可靠评估细微的字母结构，也没有出现字形扭曲或退化的确切证据。",
+      "issues": [
+       "两处裁剪都没有提供足够清晰的字形结构，无法可靠评估文字完整性。"
+      ],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The evidence favors a generated or manipulated video. Across the full sequence, the plaid-shirted man’s face and exposed forearms have an unusually smooth, rendered surface quality, with broad textureless gradients that contrast with sharper clothing and shelving details. The physical review independently identifies unstable hand and forearm articulation: fingers and wrist contours become soft, merge, or change apparent volume during repeated gestures. These are localized but mutually reinforcing anomalies, and the physical assessment notes that the gestures remain broadly plausible without teleportation or impossible body displacement. The limited 2 FPS sampling and image softness reduce certainty, so neither finding alone is decisive. The text check is inconclusive because background lettering is too blurred to assess; it supplies no affirmative support and should remain neutral. Taken together, the repeated anatomy and surface-rendering issues outweigh the otherwise stable scene structure, supporting a fake classification.",
+     "zh": "证据倾向于判定为生成或篡改的视频。在整段序列中，穿格子衬衫男子的面部和裸露的前臂呈现出异常平滑、渲染般的表面质感，大片没有纹理的渐变与更清晰的衣物和货架细节形成对比。物理检查独立发现手部和前臂的关节结构不稳定：在反复的手势中，手指和手腕轮廓变得柔软、融合，或视觉体积发生变化。这些异常是局部的，但相互印证；物理评估也指出，手势总体上仍然合理，没有瞬移或不可能的身体位移。有限的 2 FPS 采样和画面柔化降低了确定性，所以单独哪项发现都不具决定性。文字检查无法判断，因为背景文字过于模糊，无法评估；它没有提供肯定的支持，应保持中性。综合来看，反复出现的人体结构和表面渲染问题压倒了其余稳定的场景结构，支持判定为伪造。"
+    },
+    "answer": "fake"
+   }
+  ]
+ },
+ {
+  "id": "d969ec07e1a3712aa5c4",
+  "role": "physical_consistency",
+  "label": "fake",
+  "answer": "fake",
+  "duration": 8.0,
+  "audio": true,
+  "video": "d969ec07e1a3712aa5c4.mp4",
+  "poster": "d969ec07e1a3712aa5c4.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The primary hypothesis is that the sequence may contain a temporal or physical inconsistency in the person’s interaction with the hair dryer and its attached hose. The visible action involves repeated handling, rotation, and repositioning of a flexible object, so a full-duration physical-consistency review is the most useful first test. I will examine the entire eight-second interval rather than isolated frames, focusing on whether the hands, dryer, nozzle, and hose maintain plausible continuity as the subject moves. This scope can distinguish ordinary occlusion, perspective changes, and motion blur from abrupt changes in object identity, attachment, or geometry. At this stage, the still images establish a coherent setting and a recognizable subject, but they do not resolve whether the object remains physically continuous between sampled moments. A temporal mechanics check therefore provides the strongest initial basis for deciding whether the apparent action follows a plausible real-world trajectory.",
+     "zh": "主要假设是，这段序列在人物操作吹风机及其连接的软管时，可能存在时序或物理上的不一致。可见的动作包括反复拿起、旋转和重新摆放一个柔性物体，因此对整段时长做物理一致性检查是最有用的第一项检验。我会检查整个八秒区间而不是孤立的帧，重点看随着人物移动，双手、吹风机、喷嘴和软管是否保持合理的连续性。这个范围可以区分普通的遮挡、视角变化和运动模糊，与物体身份、连接方式或几何形状的突变。在这一阶段，静止画面确立了一个连贯的场景和可辨认的人物，但无法确定物体在采样时刻之间是否保持物理上的连续。因此，时序力学检查为判断这一动作是否符合合理的真实轨迹提供了最有力的初步依据。"
+    },
+    "skill": "physical_consistency",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 8.0
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The man repeatedly lifts, rotates, and lowers a black hair dryer while holding its attached cable. The dryer body and hands remain generally coherent, but the cable does not maintain a consistently plausible loop. Around 1.0–2.5 seconds, the cable appears to form a very tight, nearly closed loop beside the dryer and then changes its apparent attachment and curvature abruptly as the dryer is repositioned. The visible connector and cable path are difficult to reconcile with the changing grip, and the cable seems to pass through or merge with the dryer area rather than remaining clearly routed from the handle. The motion is not impossible in isolation, but the continuity of the flexible cable and its contact with the appliance is visibly inconsistent across these frames.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "男子反复拿起、旋转并放下一个黑色吹风机，同时握着与之相连的线缆。吹风机机身和双手总体保持连贯，但线缆并没有始终保持合理的环形。大约在 1.0–2.5 秒，线缆似乎在吹风机旁形成一个非常紧、几乎闭合的环，随后在吹风机被重新摆放时，其连接位置和弯曲程度突然改变。可见的接头和线缆走向难以与不断变化的握持方式对应起来，而且线缆似乎穿过了吹风机所在区域或与之融合，而不是清楚地从手柄处引出。这个动作单独来看并非不可能，但在这些帧中，柔性线缆的连续性及其与电器的接触明显不一致。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The preceding physical review identifies a medium-confidence concern involving continuity of the hose and its relationship to the dryer, but that finding alone does not establish whether the problem is a genuine rendering artifact or merely difficult visibility during movement. I will therefore use a complementary visual-appearance review across the same full eight-second range. This check should compare the dryer’s silhouette, red end cap, surface markings, and boundaries with the hands and background while accounting for rotation, occlusion, and changing pose. The goal is to determine whether local details remain stable under motion and whether any apparent changes exceed what perspective or blur would explain. Because the earlier result is not high confidence, this independent appearance-focused assessment is useful for either strengthening the anomaly or providing a plausible visual explanation. It also helps separate object-level instability from the otherwise coherent person and environment.",
+     "zh": "前面的物理检查发现了一个中等置信度的疑点，涉及软管的连续性及其与吹风机的关系，但仅凭这一发现无法判断问题是真正的渲染伪影，还是只是运动过程中难以看清。因此我会在同样的完整八秒范围内做互补的视觉外观检查。这项检查应比较吹风机的轮廓、红色端盖、表面标记和边界与双手及背景的关系，同时考虑旋转、遮挡和姿势变化。目标是判断局部细节在运动下是否保持稳定，以及任何表面变化是否超出了透视或模糊所能解释的范围。由于前面的结果不是高置信度，这项独立的外观检查有助于加强这一异常，或者提供合理的视觉解释。它也有助于把物体层面的不稳定与其余连贯的人物和环境区分开来。"
+    },
+    "skill": "visual_appearance",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 8.0
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The clearest appearance concern is the unusually smooth, rendered quality of the man's exposed arms and hands during the opening hose manipulation. Across the changing poses, the forearms have broad, polished shading with little fine skin texture, while the knuckles and finger surfaces look softly modeled. The hands around the hose and nozzle also have rounded, simplified contours, giving the foreground subject a synthetic appearance against the more distinctly resolved hose ribs, metal fittings, and perforated tray. This is a localized surface-quality concern rather than a claim that the anatomy changes shape. The black clothing and glossy appliance retain comparatively crisp edges, making the softness of the skin particularly noticeable. Confidence is medium because image processing and compression can also suppress skin detail, and there is no equally clear large-scale boundary failure.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "最明显的外观问题是在开场操作软管时，男子裸露的手臂和双手呈现出异常平滑、渲染般的质感。在不断变化的姿势中，前臂是大片光滑的明暗过渡，几乎没有细微的皮肤纹理，指关节和手指表面看起来是柔和塑造的。握着软管和喷嘴的双手轮廓也圆润、简化，使前景人物在更清晰的软管纹路、金属配件和带孔托盘的映衬下显得像合成的。这是一个局部的表面质感问题，而不是说人体结构发生了形状变化。黑色衣物和有光泽的电器保持了相对清晰的边缘，使皮肤的柔化格外明显。置信度为中等，因为图像处理和压缩也可能抹掉皮肤细节，而且没有同样明显的大尺度边界失效。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "Both full-duration analyses identify medium-confidence issues that converge on synthetic or otherwise non-natural visual behavior. The physical review reports that the hose’s loop, attachment, and curvature do not remain consistently plausible as the dryer is lifted, rotated, and lowered; the connector and cable path appear to change abruptly or merge with the appliance area. The appearance review independently notes unusually smooth, rendered-looking skin on the exposed arms and hands, with simplified knuckle and finger contours compared with the sharper hose, fittings, and tray. These are localized rather than catastrophic defects, and compression or image processing could explain some softness, so neither result is individually decisive. However, their agreement across different evidence types—temporal mechanics and surface appearance—makes an AI-generated sequence more likely than an ordinary recording. The coherent setting and generally stable subject do not outweigh the repeated object-continuity and rendering concerns. Therefore the media is classified as fake.",
+     "zh": "两项全时长分析都发现了中等置信度的问题，一致指向合成或非自然的视觉表现。物理检查报告，随着吹风机被拿起、旋转和放下，软管的环形、连接方式和弯曲程度没有始终保持合理；接头和线缆走向似乎突然改变，或与电器区域融合。外观检查独立指出，裸露的手臂和双手皮肤异常平滑、像渲染出来的，指关节和手指轮廓也比更清晰的软管、配件和托盘简化。这些是局部而非灾难性的缺陷，压缩或图像处理也可能解释部分柔化，所以单独来看哪项结果都不具决定性。然而，它们在不同类型的证据——时序力学和表面外观——之间相互一致，使得 AI 生成的序列比普通录像更有可能。连贯的场景和总体稳定的人物并不能压倒反复出现的物体连续性和渲染问题。因此该媒体被分类为伪造。"
+    },
+    "answer": "fake"
+   }
+  ]
+ },
+ {
+  "id": "1e3532a6e8e3806556b9",
+  "role": "ocr_consistency",
+  "label": "fake",
+  "answer": "fake",
+  "duration": 5.04,
+  "audio": false,
+  "video": "1e3532a6e8e3806556b9.mp4",
+  "poster": "1e3532a6e8e3806556b9.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The sequence shows one apparent presenter demonstrating a cosmetic bottle in a retail-like setting, with the camera moving from a wider view toward a close view. The main hypothesis is that the media may be synthetic if fine details fail to remain stable during this motion, especially on the bottle, dropper, hands, face, and background display. A full-range visual appearance inspection is therefore the most useful first step: it can compare object boundaries, textures, and local details across the entire five-second interval rather than relying on a single frame. This scope also helps distinguish ordinary motion blur or changing perspective from details that appear to regenerate or deform. The result should establish whether there is a broad temporal appearance concern and identify any specific regions that warrant more targeted physical or text-focused examination.",
+     "zh": "画面中一名主持人在类似零售店的场景中展示一瓶化妆品，镜头从远景推向近景。主要假设是：如果瓶身、滴管、双手、面部和背景展示架上的细节在运动过程中无法保持稳定，这段视频可能是合成的。因此，首先对完整时间范围做视觉外观检查最有用：它可以在整个五秒区间内比较物体边界、纹理和局部细节，而不是只依赖单帧。这个范围也有助于区分普通的运动模糊或视角变化，与看起来被重新生成或发生形变的细节。结果应能判断是否存在整体性的时序外观问题，并指出哪些区域值得进一步做针对性的物理或文字检查。"
+    },
+    "skill": "visual_appearance",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 5.0
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The clearest appearance concern is the unusually smooth, rendered quality of the woman's face during the close-up application sequence. Across the cheek, nose, and jaw, the skin has broad, nearly textureless tonal gradients, while the eyelashes, lip outline, ear, and nearby bottle edges remain comparatively crisp. The cheek droplets also appear as clean, rounded highlights against this uniformly softened surface. This combination gives the face a waxy, synthetic appearance rather than simply making the entire image soft. The effect persists as her hand moves across the cheek, making it more than an isolated blurred view. Confidence is medium because cosmetic smoothing and image processing can produce similar cues, and the frames do not establish a separate, unmistakable boundary failure.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "最明显的外观问题是女子面部在近景涂抹过程中呈现出异常平滑、渲染般的质感。脸颊、鼻子和下颌的皮肤是大片几乎没有纹理的色调渐变，而睫毛、唇线、耳朵和附近的瓶身边缘却相对清晰。脸颊上的液滴也呈现为干净、圆润的高光，与这片均匀柔化的表面形成对比。这种组合让面部显得蜡质、合成，而不只是整幅画面偏软。随着她的手划过脸颊，这种效果始终存在，因此不只是某一帧模糊。置信度为中等，因为美颜磨皮和图像处理也可能产生类似线索，而且这些画面并未显示另一处明确的边界失效。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The preceding appearance review raises a possible synthetic-rendering concern, but that concern is not by itself decisive because cosmetic smoothing, lighting, and compression can create similar visual effects. The next question is whether the depicted action obeys ordinary physical continuity. The presenter handles a bottle, raises a dropper, and brings liquid toward her face, so the full five-second interval should be checked for stable hand anatomy, plausible contact, consistent object motion, and coherent liquid behavior. A physical-consistency analysis over the same range is useful because it can either provide independent support for the appearance concern or reveal that the motion remains plausible despite visual stylization. The available one-second overview is sparse, so this check should be interpreted with appropriate caution, particularly around the exact moment of dropper contact and any brief transitions between sampled frames.",
+     "zh": "前面的外观检查提出了可能存在合成渲染的疑点，但这一点本身并不具有决定性，因为美颜磨皮、光照和压缩都可能造成类似的视觉效果。下一个问题是画面中的动作是否符合普通的物理连续性。主持人拿着瓶子、举起滴管并把液体送到脸上，因此应在完整的五秒区间内检查手部结构是否稳定、接触是否合理、物体运动是否一致、液体行为是否连贯。在同一范围内做物理一致性分析很有用：它既可能为外观疑点提供独立佐证，也可能表明尽管视觉上有风格化，动作依然合理。现有的每秒一帧概览比较稀疏，因此解读这项检查时要适当谨慎，尤其是滴管接触的确切时刻以及采样帧之间的短暂过渡。"
+    },
+    "skill": "physical_consistency",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 5.0
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The woman holds a dropper above an open bottle and then brings it toward her face. In the close views, the dropper tip and the small amount of liquid on her cheek are visible, but the frames do not clearly show a continuous, mechanically clear transfer from the dropper to the skin. The dropper is held upright with its tip near the bottle opening in the earlier close views, then appears separated from the bottle as she raises it; the later cheek contact is shown in a different pose. This makes the liquid's path and the precise contact relationship difficult to follow. The woman's hand and arm movements otherwise look broadly plausible, and the frames do not establish a definite structural deformation or impossible body motion. The concern is limited to the visible dropper-to-skin interaction, where continuity and contact are not convincingly demonstrated.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "女子将滴管举在打开的瓶子上方，然后把它移向脸部。近景中能看到滴管尖端和她脸颊上的少量液体，但这些画面并没有清楚地展示液体从滴管连续、机械上清晰地转移到皮肤上的过程。在较早的近景中，滴管竖直握持、尖端靠近瓶口；她举起滴管时，滴管看起来已与瓶子分离；而后来脸颊接触的画面是另一个姿势。这使得液体的路径和精确的接触关系难以追踪。除此之外，女子的手和手臂动作总体合理，画面也没有显示明确的结构形变或不可能的身体动作。疑点仅限于可见的滴管到皮肤的交互，其连续性和接触关系没有得到令人信服的展示。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The two preceding full-range checks leave the media’s printed and displayed lettering as an important unresolved area. The scene contains several product packages and a large background sign, and generated imagery often produces locally unstable or malformed glyphs even when the overall composition looks coherent. A targeted OCR consistency check at 4.0 seconds is appropriate because the close-up composition makes the foreground bottle and nearby text more legible than in the opening wide view. This call should compare the apparent lettering across localized regions and determine whether any irregularity is confined to low-resolution text or affects prominent, readable labels. Such evidence is supporting rather than standalone proof: perspective, focus, motion, and stylized branding can reduce recognition quality. Nevertheless, a high-confidence text anomaly in a clear frame would materially strengthen the synthetic-media hypothesis when combined with the earlier temporal appearance and physical-continuity findings.",
+     "zh": "前两项全范围检查之后，画面中印刷和展示的文字仍是一个重要的未解决区域。场景里有若干产品包装和一块大型背景招牌，而生成图像即使整体构图看起来连贯，也常常产生局部不稳定或畸形的字形。在 4.0 秒做针对性的 OCR 一致性检查是合适的，因为此时的近景构图让前景瓶身和附近的文字比开场远景更清晰。这次调用应比较各个局部区域中文字的表现，判断不规则之处是只出现在低分辨率文字上，还是也影响到显眼、可读的标签。这类证据只是辅助而非独立的证明：透视、对焦、运动和风格化的品牌字体都可能降低识别质量。不过，如果在清晰的画面中发现高置信度的文字异常，再结合前面的时序外观和物理连续性发现，将显著加强合成媒体的假设。"
+    },
+    "skill": "ocr_consistency",
+    "window": {
+     "type": "point",
+     "at": 4.0
+    },
+    "report": {
+     "verdict": "text_suspicious",
+     "confidence": "high",
+     "en": {
+      "text": "The supplied crops show repeated glyph-structure defects across separate text regions. The prominent label provides the clearest evidence, while the smaller lines and background label show additional supporting degradation. The assessment rests on visible stroke formation, not on the OCR strings or the wording they represent.",
+      "issues": [
+       "Malformed and irregularly branching strokes in the prominent bottle label.",
+       "Fused strokes and unstable character boundaries across multiple smaller label lines.",
+       "Structurally unresolved lettering on both foreground and background bottles."
+      ],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "提供的裁剪图在多个独立的文字区域中反复出现字形结构缺陷。显眼的标签提供了最清楚的证据，较小的文字行和背景标签也显示出额外的退化作为佐证。判断依据是可见的笔画构成，而不是 OCR 识别出的字符串或其含义。",
+      "issues": [
+       "显眼的瓶身标签中笔画畸形、分叉不规则。",
+       "多行较小的标签文字中笔画粘连、字符边界不稳定。",
+       "前景和背景瓶身上的文字在结构上都无法辨认。"
+      ],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The evidence converges on a synthetic-media classification. The full-range visual inspection identifies a persistent waxy, unusually smooth facial surface with crisp nearby details, which is a medium-confidence appearance concern rather than an unmistakable boundary failure. The physical review independently finds a medium-confidence issue in the dropper-to-cheek interaction: the sampled poses do not clearly establish a continuous liquid transfer, although the broader hand and arm motion remains plausible. That limitation means the physical result is supportive, not decisive. The strongest evidence comes from the targeted text analysis at 4.0 seconds, which reports high-confidence malformed, fused, and structurally unresolved lettering across multiple foreground and background regions, including the prominent bottle label. These defects are not merely uncertain OCR readings; they concern visible glyph formation. Taken together, the repeated text irregularities, persistent rendered facial appearance, and unclear liquid contact outweigh the otherwise plausible staging and motion. The appropriate classification is fake.",
+     "zh": "证据一致指向合成媒体。全范围视觉检查发现面部持续呈现蜡质、异常平滑的表面，而附近细节清晰，这是中等置信度的外观疑点，而不是明确的边界失效。物理检查独立发现滴管到脸颊的交互存在中等置信度的问题：采样到的姿势无法清楚地建立液体连续转移的过程，不过更大范围的手和手臂动作仍然合理。这一局限意味着物理结果是辅助性的，而非决定性的。最有力的证据来自 4.0 秒的针对性文字分析，它报告前景和背景多个区域（包括显眼的瓶身标签）存在高置信度的畸形、粘连和结构无法辨认的文字。这些缺陷不只是不确定的 OCR 读数，而是关乎可见的字形构成。综合来看，反复出现的文字异常、持续的渲染感面部外观以及不清楚的液体接触，压倒了其余合理的布景和动作。恰当的分类是伪造。"
+    },
+    "answer": "fake"
+   }
+  ]
+ },
+ {
+  "id": "166e6d7d7a4fa0cd8de0",
+  "role": "ocr_consistency",
+  "label": "fake",
+  "answer": "fake",
+  "duration": 5.88,
+  "audio": false,
+  "video": "166e6d7d7a4fa0cd8de0.mp4",
+  "poster": "166e6d7d7a4fa0cd8de0.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The primary hypothesis is that the sequence may contain a localized temporal rendering defect rather than a globally unstable scene. The overview shows one apparent speaker, a phone, four product boxes, and a hand moving across the foreground, so the most useful first check is a full-range visual comparison across the entire 5.875-second interval. This can establish whether object boundaries, textures, lighting, and motion remain coherent as the hand approaches and leaves the boxes. I will therefore inspect the complete range with the visual-appearance skill, using the sampled progression rather than relying on a single frame. The result should distinguish ordinary motion blur or occlusion from abrupt changes in an object’s shape or surface detail. At this stage, the repeated packaging and stable background provide useful reference points, while the moving hand remains the main area requiring scrutiny. Any anomaly found here would motivate a more targeted examination of the visible printed text.",
+     "zh": "主要假设是，这段序列可能包含局部的时序渲染缺陷，而不是整体不稳定的场景。概览中有一名说话者、一部手机、四个产品盒子，以及一只在前景移动的手，因此最有用的第一步是在整个 5.875 秒区间内做全范围的视觉比较。这样可以判断当手靠近和离开盒子时，物体边界、纹理、光照和运动是否保持连贯。因此我会用视觉外观技能检查完整范围，依据采样序列而不是单帧。结果应能区分普通的运动模糊或遮挡，与物体形状或表面细节的突变。在这一阶段，重复的包装和稳定的背景提供了有用的参照，而移动的手是需要重点审视的区域。如果这里发现任何异常，就有理由进一步针对可见的印刷文字做检查。"
+    },
+    "skill": "visual_appearance",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 5.88
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The clearest appearance concern is the unusually smooth, rendered quality of the woman's face during the opening pointing gesture. Across the changing head positions, the forehead, cheeks, and nose retain broad, nearly textureless tonal gradients, while the eyes, eyebrows, and lip contours remain comparatively crisp. The cheek coloration also appears softly blended into the surrounding skin rather than showing comparable fine surface detail. This produces a waxy, airbrushed appearance that persists as the face moves, rather than being confined to one blurred pose. The effect is most apparent when the face is exposed between the moving arm and the phone. Confidence is medium because cosmetic smoothing and image processing can produce similar cues, and the frames do not establish a separate, unmistakable boundary failure.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "最明显的外观问题是女子在开场指点动作中，面部呈现出异常平滑、渲染般的质感。随着头部位置变化，额头、脸颊和鼻子始终是大片几乎没有纹理的色调渐变，而眼睛、眉毛和唇部轮廓却相对清晰。脸颊上的颜色也是柔和地融入周围皮肤，而没有相应的细微表面细节。这形成一种蜡质、喷枪修饰般的外观，并且随面部移动持续存在，而不是只出现在某个模糊的姿势中。当面部暴露在移动的手臂和手机之间时，这种效果最明显。置信度为中等，因为美颜磨皮和图像处理也可能产生类似线索，而且这些画面并未显示另一处明确的边界失效。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The preceding full-range appearance review identifies a medium-confidence concern involving the face’s unusually smooth, rendered-looking surface, but it does not establish a decisive boundary failure and leaves cosmetic processing as a plausible alternative. The remaining useful question is whether the prominent product packaging behaves like stable physical text. The overview shows four nearly identical boxes with repeated lettering, making a focused OCR-consistency check at 4.0 seconds appropriate: it can compare the legibility and structure of the printed regions while the boxes are clearly visible. This targeted scope is useful because generated imagery often produces malformed or inconsistent glyphs even when the surrounding scene appears coherent. I will use the OCR skill at that timestamp, including its localized text assessment, to test whether the repeated labels retain plausible character shapes and spacing. This evidence should be weighed alongside, rather than substituted for, the earlier appearance finding.",
+     "zh": "前面的全范围外观检查发现了一个中等置信度的疑点，即面部表面异常平滑、看起来像渲染出来的，但并未发现决定性的边界失效，美颜处理仍是一个合理的替代解释。剩下有用的问题是，显眼的产品包装上的文字是否表现得像稳定的实物文字。概览中有四个几乎相同、印有重复文字的盒子，因此在 4.0 秒做聚焦的 OCR 一致性检查是合适的：此时盒子清晰可见，可以比较各印刷区域的可读性和结构。这种针对性的范围很有用，因为生成图像即使周围场景看起来连贯，也常常产生畸形或不一致的字形。我会在该时间点使用 OCR 技能，包括其局部文字评估，检验重复的标签是否保持合理的字符形状和间距。这项证据应与前面的外观发现结合权衡，而不是替代它。"
+    },
+    "skill": "ocr_consistency",
+    "window": {
+     "type": "point",
+     "at": 4.0
+    },
+    "report": {
+     "verdict": "text_suspicious",
+     "confidence": "medium",
+     "en": {
+      "text": "All three crops show a recurring localized anomaly in the central A. The concern is its distorted construction, not the unusual spelling or OCR mismatch. Softness limits certainty, but the repeated structural irregularity supports a suspicious assessment.",
+      "issues": [
+       "Repeated central A glyphs have unusually narrow upper structures and elongated lower diagonals.",
+       "The repeated label has inconsistent character construction despite broadly similar lettering."
+      ],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "三张裁剪图都在中间的字母 A 上反复出现局部异常。疑点在于它的构造发生了扭曲，而不是拼写不寻常或 OCR 结果不匹配。画面偏软限制了确定性，但反复出现的结构不规则支持“可疑”的判断。",
+      "issues": [
+       "重复出现的中间字母 A 上部结构异常狭窄、下方斜笔被拉长。",
+       "重复的标签整体字形相似，但字符构造不一致。"
+      ],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The evidence supports a fake classification. Across the full sequence, the visual review found a persistent waxy, airbrushed quality in the woman’s face: broad textureless gradients coexist with comparatively crisp eyes, brows, and lips. This is a meaningful rendering concern, though its medium confidence and the possibility of cosmetic smoothing or image processing limit its decisiveness. The focused text review independently found recurring structural irregularities in the repeated central “A” glyphs, including narrow upper forms and elongated lower diagonals, with inconsistent character construction across similar labels. That result is also medium confidence because softness can obscure fine detail, but the anomaly recurs across multiple localized regions rather than being a single ambiguous crop. Together, the persistent facial rendering artifact and repeated malformed packaging text provide converging signs of synthetic image generation. No audio is available, so there is no speech or voice evidence to weigh. The combined visual and text inconsistencies outweigh the stated uncertainty and favor fake.",
+     "zh": "证据支持伪造的判断。在整个序列中，视觉检查发现女子面部持续呈现蜡质、喷枪修饰般的质感：大片无纹理的渐变与相对清晰的眼睛、眉毛和嘴唇并存。这是一个有意义的渲染疑点，但其中等置信度以及美颜磨皮或图像处理的可能性限制了它的决定性。聚焦的文字检查独立发现，重复出现的中间“A”字形存在反复的结构不规则，包括上部过窄、下方斜笔被拉长，而且在相似的标签之间字符构造不一致。这一结果同样是中等置信度，因为画面偏软可能掩盖细节，但这一异常在多个局部区域反复出现，而不是单个含糊的裁剪图。持续的面部渲染伪影与反复出现的畸形包装文字一起，构成了图像合成的相互印证的迹象。视频没有音频，因此没有语音或声音证据可供权衡。综合的视觉和文字不一致压倒了所述的不确定性，倾向于伪造。"
+    },
+    "answer": "fake"
+   }
+  ]
+ },
+ {
+  "id": "c04559bab78f9a8b5b7e",
+  "role": "common_sense",
+  "label": "fake",
+  "answer": "fake",
+  "duration": 5.0,
+  "audio": false,
+  "video": "c04559bab78f9a8b5b7e.mp4",
+  "poster": "c04559bab78f9a8b5b7e.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The sequence presents a highly unusual staged-looking interaction: a cat appears positioned at the steering wheel of a small red car, while an officer stands beside it and a police vehicle is behind them. Before assessing rendering artifacts, the first question is whether the depicted action is physically and semantically plausible. A common-sense review across the full five-second interval can test whether the cat’s posture, apparent control of the vehicle, officer’s behavior, and vehicle motion form a coherent real-world event. This broad temporal scope is useful because a single frame could make an unusual but possible arrangement seem credible, whereas repeated frames may reveal whether the cat actually interacts with the controls or whether the scene remains frozen. The result should establish whether the central premise itself is credible, while leaving image-generation artifacts and text quality for separate checks.",
+     "zh": "这段序列呈现了一个非常反常、像是摆拍的互动：一只猫似乎坐在一辆红色小车的方向盘后，一名警察站在旁边，后面还有一辆警车。在评估渲染伪影之前，首先要问的是画面中的行为在物理和语义上是否合理。在完整的五秒区间内做常识检查，可以检验猫的姿势、它对车辆的明显操控、警察的行为以及车辆运动是否构成一个连贯的真实事件。这种较宽的时间范围很有用，因为单帧可能让一个反常但可能发生的场面显得可信，而连续的多帧则可能揭示猫是否真的在操作控制装置，或者场景是否一直静止不变。结果应能判断核心前提本身是否可信，而图像生成伪影和文字质量留给其他检查。"
+    },
+    "skill": "common_sense",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 5.0
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "high",
+     "en": {
+      "text": "The scene presents a cat as the apparent driver of a full-size road car, seated upright behind the steering wheel and apparently operating it while a police officer writes a ticket beside the vehicle. The cat's paws are placed on the wheel, but there is no visible human operator, restraint, or other mechanism that would make the cat's control of the vehicle plausible. The officer's ticketing behavior is coherent on its own, yet the central event depends on an animal performing a human driving task without a credible causal explanation. The car remains stationary in the sampled frames, so the anomaly is not based on an observed crash or impossible movement; it is the depicted affordance and action itself. The scene therefore conflicts with ordinary animal capabilities and vehicle operation.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "画面把一只猫呈现为一辆正常尺寸公路汽车的驾驶者：它直立坐在方向盘后，似乎正在驾驶，而一名警察在车旁开罚单。猫的爪子放在方向盘上，但看不到任何人类驾驶员、约束装置或其他机制能让猫控制车辆这件事变得合理。警察开罚单的行为本身是连贯的，但核心事件依赖于一只动物在没有可信因果解释的情况下完成人类的驾驶任务。在采样帧中汽车一直静止，因此这一异常并不是基于观察到的碰撞或不可能的运动，而是画面所描绘的功能与行为本身。因此，这一场景与普通的动物能力和车辆操作相矛盾。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The preceding assessment identifies a strong plausibility concern centered on the cat’s apparent role as driver, but that concern does not by itself distinguish a deliberately staged scene from synthetic imagery. The next useful test is temporal visual consistency across the same complete interval. Comparing the cat’s face, paws, vehicle edges, officer, police car, and background can reveal whether details remain stable as the officer changes pose and the apparent vehicle motion progresses. Particular attention should go to fine boundaries and repeated structures, since generated imagery often preserves the broad composition while subtly regenerating local features between frames. This check can either provide independent support for an artificial origin or show that the unusual premise is visually coherent. It should remain focused on appearance continuity rather than re-evaluating the semantic plausibility already examined.",
+     "zh": "前面的评估发现了一个很强的合理性疑点，集中在猫看起来扮演驾驶者这件事上，但这一疑点本身无法区分刻意摆拍的场景与合成图像。下一个有用的检验是在同一完整区间内的时序视觉一致性。比较猫的脸、爪子、车辆边缘、警察、警车和背景，可以揭示随着警察改变姿势、车辆看似移动时，细节是否保持稳定。应特别关注细微的边界和重复的结构，因为生成图像往往保留整体构图，却在帧与帧之间悄悄重新生成局部特征。这项检查既可能为人工来源提供独立佐证，也可能表明这个反常的前提在视觉上是连贯的。它应专注于外观的连续性，而不是重新评估前面已经检查过的语义合理性。"
+    },
+    "skill": "visual_appearance",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 5.0
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The scene has a conspicuously smooth, rendered appearance, most evident in the cat's face and the officer's exposed skin. Across the opening views, the cat's forehead, cheeks, and muzzle have broad, softly blended fur shading with little fine strand detail, while its eyes and facial outline remain unusually clean and graphic. The officer's cheek, forehead, and forearms similarly show smooth tonal transitions and simplified surface detail. This treatment contrasts with the more sharply delineated road texture, vehicle edges, and clothing outlines. The concern is the persistent synthetic softness of the subjects, rather than a definite change in identity or a lighting contradiction. The visible evidence supports an appearance anomaly with moderate confidence; it does not establish a specific temporal flicker or a particular facial feature changing shape.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "场景呈现出明显平滑、渲染般的外观，在猫的脸和警察裸露的皮肤上最为明显。在开场的几个画面中，猫的额头、脸颊和口鼻处是大片柔和混合的毛发阴影，几乎没有细微的毛丝细节，而它的眼睛和面部轮廓却异常干净、像图形一样。警察的脸颊、额头和前臂同样呈现平滑的色调过渡和简化的表面细节。这种处理与更清晰的路面纹理、车辆边缘和衣物轮廓形成对比。疑点在于主体持续存在的合成般的柔化，而不是身份发生明确变化或光照矛盾。可见证据以中等置信度支持外观异常；它并未显示具体的时序闪烁，也没有某个面部特征改变形状。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The two preceding checks leave the main question focused on whether the scene’s visible text behaves like ordinary photographed signage. The license plate is prominent and contains a short, high-contrast word, making it a useful localized test: generated images often produce readable-looking lettering with unstable or malformed character boundaries, while genuine text may remain structurally consistent even when slightly blurred. Inspecting the plate at the specified two-second point is appropriate because it is clearly visible in the supplied chronology and can be evaluated independently of the cat-and-driver premise. This is a narrow corroborating check, not a standalone authenticity test. Its value depends on whether the lettering is legible and whether any irregularity is localized to the text rather than caused by general image softness, perspective, or compression.",
+     "zh": "前两项检查之后，主要问题集中在画面中的可见文字是否表现得像普通拍摄到的标识。车牌很显眼，上面有一个短小、高对比度的单词，是一个有用的局部检验：生成图像常常产生看似可读、但字符边界不稳定或畸形的文字，而真实的文字即使略有模糊，结构上也会保持一致。在指定的两秒时间点检查车牌是合适的，因为在给出的时间序列中它清晰可见，而且可以独立于“猫当司机”这一前提进行评估。这是一项范围很窄的佐证检查，而不是独立的真伪检验。它的价值取决于文字是否清晰可读，以及任何不规则之处是否只出现在文字上，而不是由整体画面偏软、透视或压缩造成的。"
+    },
+    "skill": "ocr_consistency",
+    "window": {
+     "type": "point",
+     "at": 2.0
+    },
+    "report": {
+     "verdict": "text_suspicious",
+     "confidence": "medium",
+     "en": {
+      "text": "One localized text region shows generation-like glyph dissolution and unstable character structure, while the other is regular and legible.",
+      "issues": [
+       "Localized background plate lettering is structurally unreadable and appears melted or unresolved.",
+       "The clear foreground plate provides a strong contrast with the degraded background plate text."
+      ],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "其中一个局部文字区域显示出类似生成伪影的字形溶解和不稳定的字符结构，而另一个区域则规整、清晰可读。",
+      "issues": [
+       "背景车牌上的局部文字在结构上无法辨认，看起来像融化了或没有成形。",
+       "清晰的前景车牌与退化的背景车牌文字形成了强烈对比。"
+      ],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The evidence converges on a synthetic or otherwise non-real depiction. The strongest finding is the high-confidence common-sense issue: the cat is presented as the apparent driver of a road vehicle, with paws on the wheel but no credible mechanism explaining how it could operate the car. The officer’s ticketing behavior is coherent, but it does not resolve that central physical contradiction. Visual inspection adds moderate support, describing unusually smooth, rendered-looking fur and exposed skin, with simplified shading and clean graphic facial contours compared with sharper environmental details. The text check is also moderately suspicious: one localized plate region has melted or unresolved lettering, while another is clear, creating an inconsistent text-quality pattern. These appearance and text findings are not individually decisive, and the stationary vehicle limits motion-based inference, but together with the implausible central action they strongly favor an AI-generated scene. Therefore the media is fake.",
+     "zh": "证据一致指向合成的或非真实的画面。最有力的发现是高置信度的常识问题：猫被呈现为一辆公路车辆的驾驶者，爪子放在方向盘上，却没有任何可信的机制解释它如何能驾驶汽车。警察开罚单的行为是连贯的，但这并不能消除这个核心的物理矛盾。视觉检查提供了中等程度的佐证，描述了毛发和裸露皮肤异常平滑、像渲染出来的，阴影简化、面部轮廓干净得像图形，与更清晰的环境细节形成对比。文字检查同样是中等程度的可疑：一个局部车牌区域的文字像融化了或没有成形，而另一个区域却很清晰，构成了不一致的文字质量模式。这些外观和文字发现单独来看都不具决定性，而且车辆静止也限制了基于运动的推断，但结合不合理的核心行为，它们强烈支持这是 AI 生成的场景。因此该媒体为伪造。"
+    },
+    "answer": "fake"
+   }
+  ]
+ },
+ {
+  "id": "bc17e255219ee0bf3ac3",
+  "role": "common_sense",
+  "label": "fake",
+  "answer": "fake",
+  "duration": 16.04,
+  "audio": true,
+  "video": "bc17e255219ee0bf3ac3.mp4",
+  "poster": "bc17e255219ee0bf3ac3.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The visible sequence presents a highly unusual airport event: a decorated passenger aircraft appears to be moving alongside a large Santa sleigh filled with gifts. Before assessing whether the imagery is physically credible, it is useful to test the scene against ordinary event logic. The key hypothesis is that the apparent flight may be a staged visual effect, a composited sequence, or an AI-generated depiction rather than a genuine recording. This common-sense review should examine whether the aircraft, sleigh, airport infrastructure, and their apparent relationship form a plausible real-world scenario. It should also distinguish merely fantastical subject matter from contradictions in the depicted event, such as unsupported objects, unexplained attachments, or actions that require impossible mechanics. The selected interval covers the transition from the close ground-level views to the wider airborne views, making it appropriate for evaluating the central causal claim without relying only on isolated visual artifacts.",
+     "zh": "可见的序列呈现了一个非常反常的机场事件：一架装饰过的客机似乎与一辆装满礼物的大型圣诞老人雪橇并排移动。在评估画面在物理上是否可信之前，先用普通的事件逻辑检验这个场景是有用的。关键假设是，这段看似飞行的画面可能是摆拍的视觉特效、合成的序列，或 AI 生成的画面，而不是真实的录像。这项常识检查应考察飞机、雪橇、机场设施以及它们之间的表面关系是否构成一个合理的真实场景。它还应区分只是题材奇幻，与所描绘事件中的矛盾，例如没有支撑的物体、无法解释的连接，或需要不可能机制才能完成的动作。所选区间覆盖了从近距离地面视角到较远的空中视角的过渡，适合评估核心的因果主张，而不只依赖孤立的视觉伪影。"
+    },
+    "skill": "common_sense",
+    "window": {
+     "type": "range",
+     "start": 9.4,
+     "end": 15.1
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "high",
+     "en": {
+      "text": "The scene depicts a commercial passenger aircraft taking off from an airport runway while carrying a large red sleigh filled with presents and a Santa-like figure. The sleigh is positioned behind the aircraft and appears to travel with it, but no visible mechanism explains how the sleigh is attached, supported, or propelled. The aircraft's ordinary flight behavior is therefore combined with an unexplained passenger-carrying vehicle that has no plausible operational role in the scene. The Christmas trees and decorations fit a festive theme, but they do not provide a causal explanation for the sleigh's movement or the aircraft's unusual load. The event is clearly visible across multiple frames, making the semantic and causal inconsistency sufficiently observable.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "画面描绘一架商用客机从机场跑道起飞，同时带着一辆装满礼物的大型红色雪橇和一个圣诞老人模样的人物。雪橇位于飞机后方，看起来随飞机一起移动，但看不到任何机制解释雪橇是如何连接、支撑或被推动的。因此，飞机正常的飞行行为与一辆无法解释、在场景中没有合理作用的载人交通工具结合在了一起。圣诞树和装饰符合节日主题，但它们并不能为雪橇的移动或飞机的异常负载提供因果解释。这一事件在多帧中清晰可见，语义和因果上的不一致足够明显。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The preceding semantic review identifies a strong causal concern: the sleigh appears to accompany the aircraft without an evident explanation for its support or propulsion. That finding supports a more focused physical examination, but it does not by itself establish whether the apparent motion is a practical stunt, an edit, or generated imagery. The next useful test is therefore physical consistency across the same late sequence. This review should track the aircraft’s trajectory, the sleigh’s position and orientation, the apparent connection between them, and whether their motion remains mechanically coherent as the camera perspective changes. It should also check for continuity in the aircraft’s structure and the sleigh’s relationship to the surrounding airport environment. Because the available interval is sampled rather than continuous, the assessment should remain attentive to uncertainty about unseen attachment points, forces, and intermediate motion, while still determining whether the visible dynamics provide a credible real-world explanation.",
+     "zh": "前面的语义检查发现了一个很强的因果疑点：雪橇似乎伴随着飞机，却没有明显的支撑或推进解释。这一发现支持进行更聚焦的物理检查，但它本身并不能判断这一表面运动是实际的特技、剪辑，还是生成的画面。因此下一个有用的检验是在同一后段序列上检查物理一致性。这项检查应追踪飞机的轨迹、雪橇的位置和朝向、两者之间的表面连接，以及随着镜头视角变化，它们的运动是否保持机械上的连贯。它还应检查飞机结构的连续性，以及雪橇与周围机场环境的关系。由于可用区间是采样的而非连续的，评估时应注意对看不到的连接点、受力和中间运动的不确定性，同时仍要判断可见的动态能否提供可信的真实解释。"
+    },
+    "skill": "physical_consistency",
+    "window": {
+     "type": "range",
+     "start": 9.4,
+     "end": 15.1
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "high",
+     "en": {
+      "text": "The aircraft and sleigh do not maintain physically plausible contact or motion relationships. The sleigh appears to travel alongside and then behind the aircraft while remaining suspended above the tarmac, with no visible support, propulsion, or mechanically credible connection. Across the sequence, the aircraft rises and advances while the sleigh stays at a similar height and follows a separate path, despite the apparent proximity and alignment suggesting a shared movement. The sleigh also passes close to the aircraft without a clear collision response or consistent depth relationship. The reindeer antlers on the aircraft are visible, but they do not provide a plausible mechanism for pulling or carrying the sleigh. These are clear violations of contact, trajectory, and object-motion consistency rather than ordinary camera movement or a normal airport maneuver.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "飞机和雪橇没有保持物理上合理的接触或运动关系。雪橇看起来先在飞机旁边、随后在飞机后方移动，同时一直悬在停机坪上方，没有可见的支撑、推进或机械上可信的连接。在整个序列中，飞机在上升和前进，而雪橇却保持在相近的高度并沿着另一条路径移动，尽管两者的接近和对齐暗示它们在一起运动。雪橇还从飞机近旁经过，却没有明确的碰撞反应或一致的深度关系。飞机上可以看到驯鹿鹿角装饰，但它们并不能提供拉动或承载雪橇的合理机制。这些是对接触、轨迹和物体运动一致性的明确违背，而不是普通的镜头运动或正常的机场操作。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "Both analyses independently identify high-confidence problems in the central event. The common-sense assessment finds that a commercial passenger aircraft appears to take off while carrying or traveling with a large red sleigh and Santa-like figure, but no visible mechanism explains how the sleigh is supported, attached, or propelled. The physical-consistency assessment reinforces this: the sleigh follows a separate path while remaining at a similar height, lacks credible contact or motion relationships, and passes near the aircraft without a consistent depth or collision response. The antlers are decorative and do not supply a plausible pulling mechanism. The festive decorations and airport setting are coherent in isolation, but they do not resolve the impossible load and motion. Although sampled frames leave some intermediate behavior unobserved, the repeated causal and physical contradictions across the interval are substantial. The media is therefore best classified as fake.",
+     "zh": "两项分析都独立地在核心事件中发现了高置信度的问题。常识评估发现，一架商用客机似乎在起飞时带着一辆大型红色雪橇和一个圣诞老人模样的人物，或与之一起移动，但没有任何可见的机制解释雪橇是如何被支撑、连接或推动的。物理一致性评估进一步印证了这一点：雪橇沿着另一条路径移动，同时保持在相近的高度，缺乏可信的接触或运动关系，并且从飞机近旁经过却没有一致的深度关系或碰撞反应。鹿角只是装饰，无法提供合理的拉动机制。节日装饰和机场环境单独看是连贯的，但它们无法解释这种不可能的负载和运动。尽管采样帧未能观察到部分中间行为，但整个区间内反复出现的因果和物理矛盾是实质性的。因此该媒体最好被归类为伪造。"
+    },
+    "answer": "fake"
+   }
+  ]
+ },
+ {
+  "id": "2e9f6272ff94c8653f34",
+  "role": "voice_profile",
+  "label": "fake",
+  "answer": "fake",
+  "duration": 8.0,
+  "audio": true,
+  "video": "2e9f6272ff94c8653f34.mp4",
+  "poster": "2e9f6272ff94c8653f34.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The primary hypothesis is that the sequence may contain generated or composited visual details, so the first step should examine temporal appearance across the full eight-second interval. A broad visual-appearance review is useful because the subject, umbrella, clothing, and background should retain coherent textures, edges, and fine structures as the camera and subject move. I will use the complete range rather than a single frame, since isolated still images can conceal instability. Particular attention should go to repeated umbrella ribs, canopy seams, hand-to-handle boundaries, facial features, hair, and any small markings on the clothing. The goal is to distinguish ordinary motion blur, rain, focus changes, and compression from details that appear to regenerate or deform between adjacent moments. This establishes whether there are visible image-level anomalies before testing the scene’s physical continuity separately.",
+     "zh": "主要假设是，这段序列可能包含生成或合成的视觉细节，因此第一步应在完整的八秒区间内检查时序外观。较宽的视觉外观检查很有用，因为随着镜头和人物移动，人物、雨伞、衣物和背景应保持连贯的纹理、边缘和细微结构。我会使用完整范围而不是单帧，因为孤立的静止画面可能掩盖不稳定性。应特别关注重复的伞骨、伞面接缝、手与伞柄的边界、面部特征、头发以及衣物上的小标记。目标是区分普通的运动模糊、雨水、对焦变化和压缩，与在相邻时刻之间看起来被重新生成或发生形变的细节。这一步先确定是否存在可见的图像层面异常，再单独检验场景的物理连续性。"
+    },
+    "skill": "visual_appearance",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 8.0
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The woman's face has a conspicuously smooth, rendered appearance across the opening portion. Her forehead, cheeks, and the area around her nose retain broad, nearly textureless tonal gradients as her expression and head angle change. The eyes, eyebrows, and lips appear comparatively crisp and simplified against this unusually uniform facial surface, producing a doll-like appearance rather than merely a uniformly soft image. This is most apparent while she faces the camera and then looks downward, because the surrounding umbrella ribs, jacket seams, microphone, and railings retain more distinct local detail. The concern is the persistent synthetic-looking treatment of the face, not a claimed change in identity or a definite facial deformation. Confidence is medium because image processing and cosmetic smoothing could contribute to the same visible appearance.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "在开场部分，女子的面部呈现出明显平滑、渲染般的外观。随着表情和头部角度变化，她的额头、脸颊和鼻子周围始终是大片几乎没有纹理的色调渐变。眼睛、眉毛和嘴唇在这片异常均匀的面部表面上显得相对清晰而简化，形成一种玩偶般的外观，而不只是整幅画面均匀偏软。当她面向镜头、随后低头时，这一点最明显，因为周围的伞骨、外套接缝、麦克风和栏杆都保留了更清晰的局部细节。疑点在于面部持续呈现合成般的处理，而不是声称身份发生变化或面部出现明确形变。置信度为中等，因为图像处理和美颜磨皮也可能造成同样的可见外观。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The appearance review provides a reason to investigate whether any suspected irregularities are accompanied by physically implausible motion, but it does not by itself establish how the scene behaves over time. The next useful test is therefore physical consistency across the same full duration. I will assess whether the woman’s posture, hand placement, umbrella, clothing, and surrounding structures maintain plausible relationships as she moves. This scope also allows comparison of the apparent camera motion with the subject’s position and the changing background. The review should look for discontinuities such as object penetration, sudden displacement, unstable anatomy, or inconsistent contact, while recognizing that the supplied sampling may not capture every intermediate frame. A clean physical result would narrow the concern to visual rendering rather than motion, whereas a clear physical contradiction would provide independent support for synthetic generation.",
+     "zh": "外观检查提供了一个理由去调查可疑的不规则之处是否伴随着物理上不合理的运动，但它本身并不能说明场景随时间如何变化。因此下一个有用的检验是在同样的完整时长内检查物理一致性。我会评估女子的姿势、手的位置、雨伞、衣物和周围结构在她移动时是否保持合理的关系。这个范围也便于比较镜头的运动与人物位置以及背景的变化。检查应寻找物体穿插、突然位移、身体结构不稳定或接触不一致等不连续现象，同时也要认识到所提供的采样可能没有覆盖每一个中间帧。如果物理检查干净，疑点就缩小到视觉渲染而非运动；如果出现明确的物理矛盾，则会为合成生成提供独立佐证。"
+    },
+    "skill": "physical_consistency",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 8.0
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The woman and umbrella remain broadly continuous as she walks, but the umbrella's structural behavior is not fully consistent. Across the middle portion, the canopy shifts from a relatively level, broad shape to a noticeably tilted and compressed form while the shaft and handle remain nearly fixed in the woman's hand. The right-side fabric and curved support elements also change their apparent attachment and curvature without a clearly corresponding hand movement or strong environmental force. The umbrella does not show a clean, mechanically coherent rotation or deformation; instead, its canopy geometry appears to be regenerated between sampled frames. The woman's body and the surrounding walkway remain stable, making the umbrella's changing shape the clearest physical anomaly. The 2 FPS sampling limits precise motion reconstruction, so confidence is medium rather than high.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "女子和雨伞在她行走时总体保持连续，但雨伞的结构表现并不完全一致。在中段，伞面从相对水平、宽阔的形状变成明显倾斜、压扁的形状，而伞杆和伞柄却几乎固定在女子手中。右侧的伞布和弧形支撑件的连接方式和弯曲程度也发生了变化，却没有相应明显的手部动作或强烈的外力。雨伞并没有表现出干净、机械上连贯的旋转或形变；相反，它的伞面几何形状看起来是在采样帧之间被重新生成的。女子的身体和周围的走道保持稳定，这让雨伞形状的变化成为最明显的物理异常。2 FPS 的采样限制了对运动的精确重建，因此置信度为中等而非高。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The two full-range visual checks leave the main question focused on whether the media’s audio and visible speaker are compatible. Because the overview shows one apparent woman addressing the camera, a speaker-aware voice profile can provide descriptive supporting evidence about the audible speaker and whether there is an obvious demographic mismatch. I will request the profile for the whole video, allowing the tool to identify the active speech interval and report whether multiple speakers or overlap complicate attribution. This is not a standalone authenticity test: age and gender estimates are probabilistic, and dubbing, voice-over, or uncertain face-to-voice correspondence could weaken any conflict. Still, a strong mismatch would be relevant when the visible person is clearly speaking, while a compatible profile would mainly remove one possible concern rather than prove the recording genuine.",
+     "zh": "两项全范围视觉检查之后，主要问题集中在媒体的音频与可见的说话者是否相容。由于概览中只有一名女子在对镜头说话，区分说话者的声音画像可以提供关于可听到的说话者的描述性辅助证据，并判断是否存在明显的人口特征不符。我会对整段视频请求声音画像，让工具识别出有效的语音区间，并报告是否有多个说话者或重叠使归属变得复杂。这不是一项独立的真伪检验：年龄和性别估计是概率性的，配音、画外音或不确定的人脸与声音对应关系都可能削弱任何冲突。不过，当可见的人明显在说话时，强烈的不匹配是相关的；而相容的声音画像主要只是排除一个可能的疑点，并不能证明录像是真实的。"
+    },
+    "skill": "voice_profile",
+    "window": {
+     "type": "whole",
+     "start": 0.0,
+     "end": 8.0
+    },
+    "report": {
+     "verdict": "profile_complete",
+     "confidence": "info",
+     "en": {
+      "text": "voice_profile (speaker-aware and descriptive; profile_complete means the analysis succeeded, not that the media is real or fake; emotion dimensions and category probabilities are on 0-1 scales): SPEAKER_00@0.5-1.4s:arousal=0.47,dominance=0.56,valence=0.54;estimated_age_years=61,female_probability=0.00,male_probability=1.00,child_probability=0.00; SPEAKER_00@6.0-7.3s:arousal=0.52,dominance=0.62,valence=0.75;estimated_age_years=47,female_probability=0.00,male_probability=1.00,child_probability=0.00\noverlap_seconds: 0.0\nmossformer2_used: False\nn_segments: 2",
+      "issues": [],
+      "kind": "raw"
+     },
+     "zh": {
+      "text": "voice_profile（区分说话者的描述性分析；profile_complete 表示分析成功，而不表示媒体真实或伪造；情绪维度和类别概率采用 0-1 量表）： SPEAKER_00@0.5-1.4s:唤醒度=0.47,支配性=0.56,情绪效价=0.54;估计年龄（岁）=61,女性概率=0.00,男性概率=1.00,儿童概率=0.00; SPEAKER_00@6.0-7.3s:唤醒度=0.52,支配性=0.62,情绪效价=0.75;估计年龄（岁）=47,女性概率=0.00,男性概率=1.00,儿童概率=0.00\n重叠秒数: 0.0\n是否使用mossformer2: False\n片段数: 2",
+      "issues": [],
+      "kind": "raw"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The evidence favors a fake classification. The visual review identifies a persistent rendered or doll-like facial treatment, with unusually smooth tonal regions and simplified crisp features compared with more detailed nearby objects. The physical review independently finds that the umbrella’s canopy, fabric, and curved supports change shape and apparent attachment in ways not well explained by the relatively fixed shaft and handle. Both findings are medium-confidence and the physical assessment is limited by sparse sampling, so neither alone is conclusive; together they provide converging temporal and structural anomalies. The voice profile is formally informational rather than an authenticity verdict, but it reports a strongly male, adult-sounding speaker while the visible, apparently speaking subject is unambiguously female. That is a concrete supporting conflict, though dubbing or uncertain correspondence could reduce its weight. Overall, the combined visual and physical inconsistencies outweigh those limitations.",
+     "zh": "证据倾向于伪造的判断。视觉检查发现面部持续呈现渲染般或玩偶般的处理，色调区域异常平滑、五官清晰而简化，与附近更有细节的物体形成对比。物理检查独立发现，雨伞的伞面、伞布和弧形支撑件改变了形状和连接方式，而相对固定的伞杆和伞柄无法很好地解释这些变化。两项发现都是中等置信度，而且物理评估受到稀疏采样的限制，所以单独来看都不是决定性的；但它们一起提供了相互印证的时序和结构异常。声音画像在形式上只提供信息而非真伪结论，但它报告的是一个明显的男性成年人声音，而画面中看起来正在说话的人明确是女性。这是一个具体的辅助性冲突，不过配音或不确定的对应关系可能降低其权重。总体而言，综合的视觉和物理不一致压倒了这些局限。"
+    },
+    "answer": "fake"
+   }
+  ]
+ },
+ {
+  "id": "c8f7339b75d286e8a1ab",
+  "role": "voice_profile",
+  "label": "fake",
+  "answer": "fake",
+  "duration": 8.0,
+  "audio": true,
+  "video": "c8f7339b75d286e8a1ab.mp4",
+  "poster": "c8f7339b75d286e8a1ab.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The primary hypothesis is that the sequence may contain temporal rendering artifacts rather than merely ordinary camera motion. The supplied overview shows one apparent woman on a wooden bridge across eight seconds, with repeated close views of her face, hair, clothing, and the surrounding railing. A full-range visual appearance inspection is therefore the most useful first step: it can compare identity-bearing details across closely spaced samples while also checking whether the background remains geometrically stable. I will examine the entire 0.0–8.0 second interval rather than a single frame, because generation artifacts often appear as localized changes in facial structure, hair boundaries, or texture that are not visible in isolated images. This scope also allows the tool to distinguish plausible changes caused by pose, focus, lighting, or motion from abrupt inconsistencies that persist despite a largely continuous scene. The result should establish whether there is a concrete visual anomaly before considering the audio evidence.",
+     "zh": "主要假设是，这段序列可能包含时序渲染伪影，而不只是普通的镜头运动。所提供的概览在八秒内展示了一名女子站在木桥上，反复出现她的面部、头发、衣物和周围栏杆的近景。因此，首先做全范围的视觉外观检查最有用：它可以在紧密相邻的采样之间比较能体现身份的细节，同时检查背景是否在几何上保持稳定。我会检查整个 0.0–8.0 秒区间而不是单帧，因为生成伪影常常表现为面部结构、头发边界或纹理的局部变化，这些在孤立的图像中看不出来。这个范围也让工具能区分由姿势、对焦、光照或运动引起的合理变化，与在基本连续的场景中持续存在的突兀不一致。结果应在考虑音频证据之前，先确定是否存在具体的视觉异常。"
+    },
+    "skill": "visual_appearance",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 8.0
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The face has a conspicuously soft, rendered appearance across the opening portion. The forehead, cheeks, and nose form unusually uniform, low-texture surfaces, while the eyes, eyebrows, and red lip contours remain comparatively crisp. This contrast persists as the head changes angle and the mouth changes shape, giving the facial surface a smoothed, synthetic quality rather than simply making the entire image uniformly soft. The effect is most apparent in the early frontal and slightly turned views, where the surrounding hair strands, ribbed collar, and wooden railing retain more distinct detail. The anomaly is primarily the persistent facial rendering quality, not a definite change in identity or a major boundary failure. Confidence is medium because cosmetic smoothing and image processing can produce some similar characteristics.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "在开场部分，面部呈现出明显柔和、渲染般的外观。额头、脸颊和鼻子是异常均匀、低纹理的表面，而眼睛、眉毛和红色唇线却相对清晰。随着头部角度和嘴型变化，这种对比持续存在，使面部表面带有平滑、合成的质感，而不只是整幅画面均匀偏软。这种效果在早期的正面和略微侧转的画面中最明显，此时周围的发丝、罗纹领口和木质栏杆都保留了更清晰的细节。异常主要是持续存在的面部渲染质感，而不是身份发生明确变化或重大的边界失效。置信度为中等，因为美颜磨皮和图像处理也可能产生一些类似的特征。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The visual inspection has established a medium-confidence concern involving the facial rendering, but that observation alone does not determine whether the media is synthetic because smoothing, compression, or post-processing can create similar effects. The next useful check is the audio, especially because the overview presents one apparent person whose mouth is visibly changing across the sequence. A speaker-aware voice profile can characterize whether the audio contains one coherent speaker and provide descriptive age and gender estimates that may support or conflict with the visible subject. This is not a standalone authenticity test, and the analysis should be discounted if there are multiple speakers, dubbing, voice-over, or weak speaker-to-face correspondence. I will therefore request the profile for the whole video, preserving the full temporal scope so any segmentation or overlap information is available. The purpose is to add an independent modality while keeping the visual anomaly as the main working hypothesis.",
+     "zh": "视觉检查已经确立了一个关于面部渲染的中等置信度疑点，但这一观察本身无法判断媒体是否为合成，因为平滑、压缩或后期处理都可能造成类似效果。下一个有用的检查是音频，尤其是概览中只有一个人，而且她的嘴在整个序列中明显在动。区分说话者的声音画像可以判断音频中是否只有一个连贯的说话者，并给出描述性的年龄和性别估计，这些估计可能支持也可能与画面中的人相冲突。这不是一项独立的真伪检验；如果存在多个说话者、配音、画外音或说话者与人脸的对应关系较弱，就应降低这项分析的权重。因此我会对整段视频请求声音画像，保留完整的时间范围，以便获得分段或重叠信息。目的是加入一个独立的模态，同时仍以视觉异常作为主要的工作假设。"
+    },
+    "skill": "voice_profile",
+    "window": {
+     "type": "whole",
+     "start": 0.0,
+     "end": 8.0
+    },
+    "report": {
+     "verdict": "profile_complete",
+     "confidence": "info",
+     "en": {
+      "text": "voice_profile (speaker-aware and descriptive; profile_complete means the analysis succeeded, not that the media is real or fake; emotion dimensions and category probabilities are on 0-1 scales): SPEAKER_00@0.6-2.1s:arousal=0.63,dominance=0.66,valence=0.43;estimated_age_years=45,female_probability=0.00,male_probability=1.00,child_probability=0.00; SPEAKER_00@3.3-4.7s:arousal=0.62,dominance=0.64,valence=0.67;estimated_age_years=39,female_probability=0.00,male_probability=1.00,child_probability=0.00\noverlap_seconds: 0.0\nmossformer2_used: False\nn_segments: 2",
+      "issues": [],
+      "kind": "raw"
+     },
+     "zh": {
+      "text": "voice_profile（区分说话者的描述性分析；profile_complete 表示分析成功，而不表示媒体真实或伪造；情绪维度和类别概率采用 0-1 量表）： SPEAKER_00@0.6-2.1s:唤醒度=0.63,支配性=0.66,情绪效价=0.43;估计年龄（岁）=45,女性概率=0.00,男性概率=1.00,儿童概率=0.00; SPEAKER_00@3.3-4.7s:唤醒度=0.62,支配性=0.64,情绪效价=0.67;估计年龄（岁）=39,女性概率=0.00,男性概率=1.00,儿童概率=0.00\n重叠秒数: 0.0\n是否使用mossformer2: False\n片段数: 2",
+      "issues": [],
+      "kind": "raw"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The evidence favors a fake classification. The full-range visual analysis found a persistent, medium-confidence rendering issue: the face appears unusually soft and uniformly low-textured while the eyes, brows, lips, hair, collar, and railing retain sharper detail. That selective smoothing is consistent with synthetic facial rendering, although cosmetic processing remains a plausible limited alternative, so the visual result is not decisive by itself. The audio profile is formally informational rather than an authenticity verdict, but it reports a single speaker with estimated ages of 45 and 39 and male probabilities of 1.00, while the visible, apparently speaking subject is clearly a young woman. This is a concrete age and gender conflict across both detected segments. Dubbing or uncertain correspondence could weaken it, but the overview shows one unambiguous visible speaker and no reported overlap, making the mismatch meaningful supporting evidence. Together, the visual artifact and strong voice-to-face inconsistency outweigh the stated uncertainty.",
+     "zh": "证据倾向于伪造的判断。全范围视觉分析发现一个持续存在的中等置信度渲染问题：面部异常柔和、均匀缺乏纹理，而眼睛、眉毛、嘴唇、头发、领口和栏杆都保留了更清晰的细节。这种选择性的平滑与合成的面部渲染一致，不过美颜处理仍是一个有限但合理的替代解释，因此视觉结果本身并不具有决定性。声音画像在形式上只提供信息而非真伪结论，但它报告的是单一说话者，估计年龄为 45 岁和 39 岁，男性概率为 1.00，而画面中看起来正在说话的人明显是一名年轻女性。这是在两个检测到的片段中都存在的具体年龄和性别冲突。配音或不确定的对应关系可能削弱这一点，但概览中只有一个明确可见的说话者，也没有报告重叠，这使得这种不匹配成为有意义的辅助证据。视觉伪影与强烈的声音–人脸不一致结合起来，压倒了所述的不确定性。"
+    },
+    "answer": "fake"
+   }
+  ]
+ },
+ {
+  "id": "a802343844d3e094e755",
+  "role": "asr_analysis",
+  "label": "fake",
+  "answer": "fake",
+  "duration": 8.57,
+  "audio": true,
+  "video": "a802343844d3e094e755.mp4",
+  "poster": "a802343844d3e094e755.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The primary hypothesis is that the clip may contain temporal rendering or compositing artifacts rather than ordinary camera motion. The supplied overview shows one apparently continuous indoor shot with a single person centered in frame, so a full-range visual inspection is useful for checking whether facial structure, clothing, background geometry, and color registration remain stable from moment to moment. I will examine the entire 0.0–8.567 second interval rather than isolated stills, because intermittent defects may only become apparent during transitions or brief changes in pose. This scope also allows comparison of the subject against fixed environmental references such as the window, plant, wall, and door. The result should establish whether there is a coherent visual explanation for any apparent irregularities, while leaving audio authenticity and speaker correspondence for a separate assessment.",
+     "zh": "主要假设是，这段视频可能包含时序渲染或合成伪影，而不是普通的镜头运动。所提供的概览显示这是一个看似连续的室内镜头，只有一个人位于画面中央，因此全范围的视觉检查有助于检验面部结构、衣物、背景几何和颜色配准是否在每个时刻都保持稳定。我会检查整个 0.0–8.567 秒区间而不是孤立的静止画面，因为间歇性的缺陷可能只在过渡或姿势短暂变化时才会显现。这个范围也便于将人物与窗户、植物、墙壁和门等固定的环境参照进行比较。结果应能判断对任何表面上的不规则之处是否存在连贯的视觉解释，而音频真实性以及说话者是否对应则留给单独的评估。"
+    },
+    "skill": "visual_appearance",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 8.57
+    },
+    "report": {
+     "verdict": "issue",
+     "confidence": "high",
+     "en": {
+      "text": "A conspicuous temporal appearance defect occurs around 2.0 seconds. The otherwise normally colored scene abruptly develops red and cyan channel separation along the man's hair, face, shoulders, sleeves, hands, window frame, plant, and other high-contrast boundaries. This is not confined to a moving edge or a plausible optical reflection: the entire image takes on a stereoscopic-looking color offset while the composition and subject remain essentially unchanged. The neighboring frames before and after this interval return to the normal color rendering, making the effect a brief, frame-level visual discontinuity rather than a stable lighting condition or camera characteristic. The subject's identity and broad geometry remain recognizable, but the abrupt global chromatic displacement is a clear visual-appearance inconsistency. The anomaly is most clearly visible across the full frame at approximately 2.0 seconds.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "在大约 2.0 秒处出现了一个明显的时序外观缺陷。原本颜色正常的画面突然在男子的头发、脸、肩膀、袖子、双手、窗框、植物以及其他高对比度边界上出现红青色通道分离。这并不局限于某个移动的边缘，也不是合理的光学反射：整幅画面出现了类似立体图的颜色偏移，而构图和人物基本保持不变。该区间前后的相邻帧都恢复了正常的颜色渲染，因此这是一种短暂的帧级视觉不连续，而不是稳定的光照条件或相机特性。人物身份和整体几何仍可辨认，但这种突然的全局色彩错位是明确的视觉外观不一致。大约在 2.0 秒处，这一异常在整幅画面中最为明显。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The visual assessment should be complemented by an audio-side check, since a generated or manipulated clip can preserve a plausible face and setting while producing inconsistent speech timing or unnatural segmentation. The overview indicates an audio stream and a single visible person who appears to be addressing the camera, so whole-track speech analysis is appropriate. I will use the ASR-focused tool to inspect the complete audio rather than a short excerpt, looking for language identification, segmentation regularity, pacing, pauses, and other timing characteristics that can distinguish ordinary delivery from synthetic or heavily scripted speech. This step cannot by itself establish whether the image is authentic, and any transcript or timing interpretation should be weighed alongside the visual evidence. It is nevertheless useful for testing whether the soundtrack has independent signs of generation or post-processing.",
+     "zh": "视觉评估应辅以音频方面的检查，因为生成或篡改的视频可能保留合理的面部和场景，却产生不一致的语音节奏或不自然的分段。概览显示视频有音频流，并且只有一个看起来在对镜头说话的人，因此对整条音轨做语音分析是合适的。我会使用以 ASR 为核心的工具检查完整的音频而不是片段，关注语种识别、分段规律性、语速、停顿以及其他能区分普通讲话与合成或高度照稿语音的节奏特征。这一步本身无法确定画面是否真实，任何对转写或节奏的解读都应与视觉证据一起权衡。不过，它对于检验音轨是否有独立的生成或后期处理迹象仍然很有用。"
+    },
+    "skill": "asr_analysis",
+    "window": {
+     "type": "whole",
+     "start": 0.0,
+     "end": 8.57
+    },
+    "report": {
+     "verdict": "timing_anomaly",
+     "confidence": "high",
+     "en": {
+      "text": "The transcript exhibits highly suspiciously even spacing between segments (approx. 1.7s each) and within segments, suggesting robotic or synthesized delivery. Natural speech typically features variable pacing, hesitations, and irregular word durations. The complete absence of disfluencies, breathing pauses, or natural variation in segment length strongly indicates a lack of human speech characteristics.",
+      "issues": [
+       "Unnaturally regular pacing",
+       "All segments having nearly identical duration",
+       "Missing natural disfluencies"
+      ],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "转写结果显示各分段之间（约每 1.7 秒一段）以及分段内部的间隔都均匀得非常可疑，表明这是机械或合成的讲话方式。自然语音通常语速多变，有犹豫，词的时长也不规则。完全没有不流畅、换气停顿或分段长度的自然变化，强烈表明缺乏人类语音的特征。",
+      "issues": [
+       "语速规律得不自然",
+       "所有分段的时长几乎相同",
+       "缺少自然的不流畅现象"
+      ],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The remaining uncertainty concerns whether the audible speaker is consistent with the visible person and whether the voice characteristics provide supporting or conflicting evidence. The visual overview presents one unambiguous adult male who appears to be speaking directly to camera, with no obvious second person or voice-over context. A speaker-aware voice profile over the whole video can therefore characterize the dominant voice, estimate broad age and gender probabilities, and indicate whether multiple speakers or overlap complicate attribution. This is a descriptive check rather than a standalone authenticity test: a compatible profile would not clear the media, while a strong mismatch could support manipulation if speaker-to-face correspondence is clear. I will request the profile without narrowing the interval so that the analysis covers the full spoken performance and can reveal whether the audio is internally consistent.",
+     "zh": "剩下的不确定性在于，听到的说话者是否与画面中的人一致，以及声音特征提供的是支持还是相互矛盾的证据。视觉概览中只有一名明确的成年男性，看起来在直接对镜头说话，没有明显的第二个人或画外音。因此，对整段视频做区分说话者的声音画像，可以刻画主要的声音，估计大致的年龄和性别概率，并指出是否有多个说话者或重叠使归属变得复杂。这是一项描述性检查，而不是独立的真伪检验：相容的声音画像并不能证明媒体真实，而在说话者与人脸对应清楚的情况下，强烈的不匹配可以支持篡改的判断。我会在不缩小区间的情况下请求声音画像，让分析覆盖完整的讲话过程，并揭示音频内部是否一致。"
+    },
+    "skill": "voice_profile",
+    "window": {
+     "type": "whole",
+     "start": 0.0,
+     "end": 8.57
+    },
+    "report": {
+     "verdict": "profile_complete",
+     "confidence": "info",
+     "en": {
+      "text": "voice_profile (speaker-aware and descriptive; profile_complete means the analysis succeeded, not that the media is real or fake; emotion dimensions and category probabilities are on 0-1 scales): SPEAKER_00@0.5-2.8s:arousal=0.61,dominance=0.66,valence=0.48;estimated_age_years=27,female_probability=0.98,male_probability=0.01,child_probability=0.00; SPEAKER_00@3.0-6.4s:arousal=0.70,dominance=0.70,valence=0.60;estimated_age_years=31,female_probability=0.98,male_probability=0.02,child_probability=0.00; SPEAKER_00@6.9-8.3s:arousal=0.72,dominance=0.73,valence=0.31;estimated_age_years=29,female_probability=0.98,male_probability=0.02,child_probability=0.00\noverlap_seconds: 0.0\nmossformer2_used: False\nn_segments: 3",
+      "issues": [],
+      "kind": "raw"
+     },
+     "zh": {
+      "text": "voice_profile（区分说话者的描述性分析；profile_complete 表示分析成功，而不表示媒体真实或伪造；情绪维度和类别概率采用 0-1 量表）： SPEAKER_00@0.5-2.8s:唤醒度=0.61,支配性=0.66,情绪效价=0.48;估计年龄（岁）=27,女性概率=0.98,男性概率=0.01,儿童概率=0.00; SPEAKER_00@3.0-6.4s:唤醒度=0.70,支配性=0.70,情绪效价=0.60;估计年龄（岁）=31,女性概率=0.98,男性概率=0.02,儿童概率=0.00; SPEAKER_00@6.9-8.3s:唤醒度=0.72,支配性=0.73,情绪效价=0.31;估计年龄（岁）=29,女性概率=0.98,男性概率=0.02,儿童概率=0.00\n重叠秒数: 0.0\n是否使用mossformer2: False\n片段数: 3",
+      "issues": [],
+      "kind": "raw"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The evidence strongly supports a fake classification. The visual analysis found a high-confidence, brief global red/cyan channel separation around 2 seconds affecting the subject and multiple fixed background boundaries, then disappearing in neighboring frames. Because the defect is frame-level and scene-wide rather than a plausible localized reflection or motion artifact, it is a substantial temporal rendering inconsistency. Audio analysis independently reported high-confidence timing anomalies: unusually uniform segment spacing, absent natural disfluencies, and robotic pacing, all consistent with synthesized or heavily scripted speech. The voice profile is descriptive rather than decisive, but it reports a very high female probability and an estimated age in the late twenties to early thirties, conflicting with the clearly visible adult male who appears to be speaking. That mismatch is useful supporting evidence, though voice attribution can sometimes be imperfect; here the single-speaker presentation makes it more meaningful. Together, the visual discontinuity, synthetic-sounding audio, and voice-to-face conflict outweigh the otherwise coherent setting and identity.",
+     "zh": "证据强烈支持伪造的判断。视觉分析发现大约 2 秒处出现高置信度的短暂全局红青色通道分离，影响到人物和多个固定的背景边界，随后在相邻帧中消失。由于这一缺陷是帧级的、遍及整个场景，而不是合理的局部反射或运动伪影，它是一个实质性的时序渲染不一致。音频分析独立报告了高置信度的节奏异常：分段间隔异常均匀、没有自然的不流畅、语速机械，这些都与合成或高度照稿的语音一致。声音画像是描述性的而非决定性的，但它报告了非常高的女性概率，估计年龄在二十多岁到三十出头，与画面中清楚可见、看起来正在说话的成年男性相冲突。这种不匹配是有用的辅助证据，尽管声音归属有时并不完美；在这里，单一说话者的画面让它更有意义。视觉不连续、听起来像合成的音频以及声音与人脸的冲突结合起来，压倒了其余连贯的场景和人物身份。"
+    },
+    "answer": "fake"
+   }
+  ]
+ },
+ {
+  "id": "46e56aa8b3e5a99ef1aa",
+  "role": "real",
+  "label": "real",
+  "answer": "real",
+  "duration": 8.34,
+  "audio": true,
+  "video": "46e56aa8b3e5a99ef1aa.mp4",
+  "poster": "46e56aa8b3e5a99ef1aa.jpg",
+  "steps": [
+   {
+    "reasoning": {
+     "en": "The primary hypothesis is that this is a genuine continuous street recording, but the repeated frames should first be checked for visual artifacts that could indicate synthetic generation. I will examine the full available interval rather than a single image, focusing on whether fixed structures, signage, barriers, vehicles, pedestrians, and the moving foreground subject retain stable geometry and appearance. This broad temporal scope is useful because generated media may reveal inconsistent textures, object boundaries, lighting, or background details even when individual frames look plausible. The foreground man and stroller deserve particular attention because their motion provides a natural test of continuity, while the largely static street environment supplies a reference for detecting unexplained changes. At this stage, the goal is to establish whether there are visible appearance anomalies; physical plausibility and text legibility can be assessed separately afterward.",
+     "zh": "主要假设是这是一段真实、连续的街景录像，但仍应先检查这些重复的画面中是否存在可能表明合成生成的视觉伪影。我会检查完整的可用区间而不是单帧，重点看固定结构、招牌、护栏、车辆、行人以及移动的前景人物是否保持稳定的几何形状和外观。这种较宽的时间范围很有用，因为即使单帧看起来合理，生成媒体也可能暴露出不一致的纹理、物体边界、光照或背景细节。前景的男子和婴儿车值得特别关注，因为他们的运动是检验连续性的自然测试，而基本静止的街道环境则为发现无法解释的变化提供了参照。在这一阶段，目标是确定是否存在可见的外观异常；物理合理性和文字可读性之后再单独评估。"
+    },
+    "skill": "visual_appearance",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 8.3
+    },
+    "report": {
+     "verdict": "no_issue",
+     "confidence": "medium",
+     "en": {
+      "text": "Across the sequence, the street scene retains consistent appearance: the storefront, road markings, barriers, buildings, trees, and parked vehicles keep their shapes, colors, and relative positions. The moving man and stroller remain visually coherent as they approach the left edge, with no clear boundary melting, duplication, or abrupt change in detail. Fine facial and clothing details are small, and the largely fixed viewpoint limits assessment of texture behavior under substantial motion or changing light. Within the visible regions, however, there is no distinct temporal appearance anomaly.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "在整个序列中，街景保持一致的外观：店面、路面标线、护栏、建筑、树木和停放的车辆都保持各自的形状、颜色和相对位置。移动的男子和婴儿车在接近画面左边缘的过程中视觉上保持连贯，没有明显的边界融化、重复或细节突变。面部和衣物的细节较小，而且基本固定的视角限制了在大幅运动或光线变化下对纹理表现的评估。不过，在可见区域内，没有明显的时序外观异常。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The appearance review provides a basis for treating the scene as visually stable, but it does not by itself establish that the observed motion follows ordinary physical relationships. The next question is whether the man, stroller, road obstacles, vehicles, and surrounding structures move consistently through time. I will therefore inspect the same full interval with a physical-consistency analysis. This scope is appropriate because it can test continuity of trajectories, contact with the pavement, object persistence, and possible distortions such as teleportation, merging, splitting, or implausible deformation. The scene appears to contain limited motion, so the analysis should distinguish absence of detected violations from strong evidence about dynamics that are not sufficiently exercised. In particular, the stroller’s path toward the frame edge and the parked or distant traffic should be compared against the fixed barriers, road markings, and buildings. This step can either add support for authenticity or identify a concrete physical contradiction.",
+     "zh": "外观检查为将场景视为视觉稳定提供了依据，但它本身并不能确定观察到的运动符合普通的物理关系。下一个问题是男子、婴儿车、路障、车辆和周围结构是否随时间一致地运动。因此我会用物理一致性分析检查同一完整区间。这个范围是合适的，因为它可以检验轨迹的连续性、与路面的接触、物体的持续存在，以及瞬移、合并、分裂或不合理形变等可能的扭曲。场景中的运动似乎有限，因此分析应区分“未检测到违规”与“对未充分展现的动态有强证据”。尤其应将婴儿车朝画面边缘的路径以及停放或远处的车流，与固定的护栏、路面标线和建筑进行比较。这一步既可能为真实性提供支持，也可能发现具体的物理矛盾。"
+    },
+    "skill": "physical_consistency",
+    "window": {
+     "type": "range",
+     "start": 0.0,
+     "end": 8.3
+    },
+    "report": {
+     "verdict": "no_issue",
+     "confidence": "medium",
+     "en": {
+      "text": "The visible motion is physically coherent across the sampled frames. A man pushes a stroller along the sidewalk from the middle-left toward the left edge, with the stroller maintaining a stable shape, orientation, and contact with the pavement. The child remains seated in the stroller, and the man's posture and hand placement are consistent with the movement. The stroller wheels stay aligned with the sidewalk, and there is no visible teleportation, sudden acceleration, limb distortion, object splitting, or implausible collision. The road barriers, parked vehicles, buildings, and other rigid structures remain fixed in place. The 2 FPS sampling does not show every intermediate movement, so very fine kinematic details cannot be checked, but the observed progression over the full sequence is natural and continuous enough to support no physical-consistency issue.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "在采样帧中，可见的运动在物理上是连贯的。一名男子推着婴儿车沿人行道从画面中左侧走向左边缘，婴儿车保持稳定的形状、朝向以及与路面的接触。孩子一直坐在婴儿车里，男子的姿势和手的位置与运动一致。婴儿车的轮子始终与人行道对齐，没有可见的瞬移、突然加速、肢体扭曲、物体分裂或不合理的碰撞。路障、停放的车辆、建筑和其他刚性结构都保持固定。2 FPS 的采样并未展示每一个中间动作，因此无法检查非常细微的运动学细节，但在整个序列中观察到的变化足够自然、连续，支持没有物理一致性问题的结论。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The temporal and physical checks address motion and scene structure, while visible lettering remains an independent source of evidence. Synthetic imagery can produce unstable, malformed, or inconsistent text, especially on storefronts and road signs. I will inspect the text at the supplied four-second point, where the main signage is clearly visible, using OCR consistency rather than attempting to infer meaning from the scene alone. The useful scope is localized: the large shop sign, speed marking, and nearby directional or warning text can be checked for coherent glyph shapes and ordinary perspective effects. This single-time inspection cannot establish temporal text stability across the entire clip, and small or blurred lettering may remain unresolved, so it should be treated as supporting evidence only. Combined with the earlier full-range checks, however, it can reveal whether prominent readable regions show the characteristic warping or incoherence often associated with generated imagery.",
+     "zh": "时序和物理检查针对的是运动和场景结构，而可见的文字是另一个独立的证据来源。合成图像可能产生不稳定、畸形或不一致的文字，尤其是在店面和路牌上。我会在所提供的四秒时间点检查文字，此时主要的招牌清晰可见，使用 OCR 一致性检查，而不是仅凭场景去推断含义。有用的范围是局部的：大型店招、限速标线以及附近的指示或警示文字，都可以检查其字形是否连贯、是否只是普通的透视效果。单一时间点的检查无法确定文字在整段视频中的时序稳定性，较小或模糊的文字也可能无法辨认，因此只应视为辅助证据。不过，结合前面的全范围检查，它可以揭示显眼可读的区域是否出现生成图像常见的扭曲或不连贯。"
+    },
+    "skill": "ocr_consistency",
+    "window": {
+     "type": "point",
+     "at": 4.0
+    },
+    "report": {
+     "verdict": "text_ok",
+     "confidence": "high",
+     "en": {
+      "text": "All supplied text regions show coherent glyph structure consistent with ordinary photographed signage. Minor softness and stylization are present but do not produce visible warping or generation-like text anomalies.",
+      "issues": [],
+      "kind": "reason"
+     },
+     "zh": {
+      "text": "所有提供的文字区域都显示出连贯的字形结构，与普通拍摄到的标识一致。存在轻微的偏软和风格化，但并未造成可见的扭曲或类似生成伪影的文字异常。",
+      "issues": [],
+      "kind": "reason"
+     }
+    }
+   },
+   {
+    "reasoning": {
+     "en": "The full-range visual assessment found no distinct temporal appearance anomaly: the storefront, road markings, barriers, buildings, trees, and vehicles remain consistent, while the man and stroller retain coherent shapes and detail as they move. The physical-consistency assessment independently found natural, continuous motion, with stable stroller orientation, pavement contact, posture, and hand placement, and no observed teleportation, splitting, limb distortion, or implausible collision. Both findings are medium-confidence and the 2 FPS sampling leaves fine intermediate kinematics unresolved, so they are supportive rather than absolute. The OCR check at four seconds was high-confidence and found coherent glyph structure across localized signage, with only minor softness or stylization. Its single-frame scope limits conclusions about text over time, but it provides no contradictory evidence. Taken together, the stable appearance, plausible motion, and coherent text favor an ordinary recorded scene rather than AI generation.",
+     "zh": "全范围视觉评估没有发现明显的时序外观异常：店面、路面标线、护栏、建筑、树木和车辆保持一致，男子和婴儿车在移动中也保持连贯的形状和细节。物理一致性评估独立发现运动自然、连续，婴儿车的朝向、与路面的接触、人物姿势和手的位置都很稳定，没有观察到瞬移、分裂、肢体扭曲或不合理的碰撞。两项发现都是中等置信度，而且 2 FPS 的采样没有覆盖细微的中间运动，因此它们是支持性的而非绝对的。四秒处的 OCR 检查为高置信度，发现各个局部标识的字形结构连贯，只有轻微的偏软或风格化。单帧的范围限制了对文字随时间变化的结论，但它没有提供任何矛盾的证据。综合来看，稳定的外观、合理的运动和连贯的文字都更符合普通的实拍场景，而不是 AI 生成。"
+    },
+    "answer": "real"
+   }
+  ]
+ }
+]
