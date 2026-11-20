@@ -101,7 +101,7 @@ class Runtime:
         self.tokenizer = getattr(self.processor, 'tokenizer', self.processor)
         self.tokenizer.chat_template = self.template
         self.base = _base_model().eval()
-        peft = PeftModel.from_pretrained(copy.deepcopy(self.base), str(self.root / ROLES[0]),
+        peft = PeftModel.from_pretrained(copy.deepcopy(self.base), str(self.root),
                                          adapter_name=ROLES[0], is_trainable=False)
         for role in ROLES[1:]:
             peft.load_adapter(str(self.root / role), adapter_name=role, is_trainable=False)

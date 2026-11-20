@@ -5,8 +5,8 @@
 #
 #   BASE=Qwen/Qwen3.5-4B ADAPTERS=./weights/WeVisForensics-4B-LoRA bash scripts/serve_lora.sh
 #
-# ADAPTERS must contain one sub-directory per role:
-#   main/ physical_consistency/ visual_appearance/ common_sense/ ocr_consistency/
+# ADAPTERS holds the main adapter at its root and one sub-directory per inspector:
+#   physical_consistency/ visual_appearance/ common_sense/ ocr_consistency/
 # asr_analysis uses the base model itself (served as "base").
 set -euo pipefail
 
@@ -22,8 +22,8 @@ GPU_MEMORY_UTILIZATION="${GPU_MEMORY_UTILIZATION:-0.85}"
 MAX_NUM_SEQS="${MAX_NUM_SEQS:-8}"
 MAX_MODEL_LEN="${MAX_MODEL_LEN:-65536}"
 
-LORA_MODULES=()
-for role in main physical_consistency visual_appearance common_sense ocr_consistency; do
+LORA_MODULES=("main=${ADAPTERS}")
+for role in physical_consistency visual_appearance common_sense ocr_consistency; do
   LORA_MODULES+=("${role}=${ADAPTERS}/${role}")
 done
 

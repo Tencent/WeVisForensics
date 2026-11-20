@@ -15,6 +15,11 @@ from pathlib import Path
 ROLES = ("main", "physical_consistency", "visual_appearance", "common_sense", "ocr_consistency")
 
 
+def adapter_path(adapters: Path, role: str) -> Path:
+    """The main adapter sits at the release root, the inspectors in one sub-directory each."""
+    return adapters if role == "main" else adapters / role
+
+
 def merge(base: str, adapter: Path, output: Path) -> None:
     import torch
     from peft import PeftModel
@@ -37,7 +42,7 @@ def main() -> None:
     args = parser.parse_args()
     for role in args.roles:
         print(f"merging {role} ...", flush=True)
-        merge(args.base, args.adapters / role, args.output / role)
+        merge(args.base, adapter_path(args.adapters, role), args.output / role)
 
 
 if __name__ == "__main__":
