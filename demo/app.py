@@ -48,8 +48,10 @@ TOOLS = {
     'voice_profile': ('Voice profile', 'Speaker age, gender and affect from audio'),
     'asr_analysis': ('Speech', 'Transcript timing and delivery'),
 }
-OK = {'no_issue', 'text_ok'}
-INFO = {'profile_complete', 'no_text', 'inconclusive', 'insufficient_speech'}
+# Inspector findings are evidence for the investigator, so they never use the red/green verdict colors.
+FLAG = {'issue', 'text_suspicious', 'timing_anomaly'}
+OK = {'no_issue', 'text_ok', 'timing_natural'}
+VERDICT_TEXT = {'issue': 'anomaly found', 'no_issue': 'nothing found'}
 
 CITATION = '''@misc{du2026wevisforensicsselfevolvingagentomni,
       title={WeVisForensics: Self-Evolving Agent for Omni AI-Generated Video Detection}, 
@@ -79,7 +81,7 @@ GITHUB_ICON = ('<svg viewBox="0 0 16 16" width="15" height="15" fill="currentCol
                '-4.42-3.58-8-8-8z"/></svg>')
 
 CSS = '''
-.gradio-container {max-width: 1260px !important; margin: auto !important}
+.gradio-container {width: 100% !important; max-width: 1260px !important; margin: auto !important}
 #wvf-hero {padding: 18px 4px 4px}
 .wvf-brand {display: flex; align-items: center; gap: 14px}
 .wvf-brand svg {flex: none; filter: drop-shadow(0 4px 10px rgba(7,164,86,.28))}
@@ -112,9 +114,11 @@ CSS = '''
 .wvf-chips {display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px}
 .wvf-chip {display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600;
   padding: 4px 10px; border-radius: 8px; border: 1px solid transparent}
-.wvf-chip.flag {background: rgba(220,38,38,.10); color: #dc2626; border-color: rgba(220,38,38,.25)}
-.wvf-chip.ok {background: rgba(5,150,105,.10); color: #059669; border-color: rgba(5,150,105,.25)}
-.wvf-chip.info {background: rgba(107,114,128,.12); color: var(--body-text-color); border-color: var(--border-color-primary)}
+.wvf-chip.flag {background: rgba(217,119,6,.12); color: #b45309; border-color: rgba(217,119,6,.32)}
+.dark .wvf-chip.flag {background: rgba(245,158,11,.14); color: #fbbf24; border-color: rgba(245,158,11,.35)}
+.wvf-chip.ok {background: rgba(107,114,128,.12); color: var(--body-text-color); border-color: var(--border-color-primary)}
+.wvf-chip.info {background: transparent; color: var(--body-text-color); border: 1px dashed var(--border-color-primary);
+  opacity: .8}
 .wvf-ex-head {display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;
   margin: 18px 0 12px}
 .wvf-ex-head h2 {font-size: 22px; margin: 0; letter-spacing: -.02em}
@@ -133,8 +137,8 @@ CSS = '''
   border-radius: 12px; padding: 16px 18px; margin: 10px 0 0; background: var(--block-background-fill);
   color: var(--body-text-color); animation: wvf-in .35s ease both}
 @keyframes wvf-in {from {opacity: 0; transform: translateY(6px)}}
-.wvf-step.flag {border-left-color: #dc2626} .wvf-step.ok {border-left-color: #059669}
-.wvf-step.info {border-left-color: #9ca3af} .wvf-step.final {border-left-color: #07c160}
+.wvf-step.flag {border-left-color: #f59e0b} .wvf-step.ok {border-left-color: #9ca3af}
+.wvf-step.info {border-left-color: rgba(156,163,175,.35)} .wvf-step.final {border-left-color: #07c160}
 .wvf-head {display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap}
 .wvf-num {font-size: 12px; font-weight: 700; opacity: .55; font-variant-numeric: tabular-nums}
 .wvf-tool {font-size: 16px; font-weight: 700}
@@ -163,12 +167,10 @@ CSS = '''
   background: rgba(107,114,128,.16)}
 .wvf-rng-sel {position: absolute; top: 12px; height: 10px; border-radius: 5px; cursor: grab;
   background: linear-gradient(90deg, #2fd383, #07a456); box-shadow: 0 0 0 3px rgba(7,193,96,.16)}
-.wvf-win.fixed .wvf-rng-sel {cursor: default}
 .wvf-h {position: absolute; top: 5px; width: 18px; height: 24px; margin-left: -9px; border-radius: 7px; cursor: ew-resize;
   background: #fff; border: 2px solid #07a456; box-shadow: 0 2px 6px rgba(0,0,0,.18)}
 .wvf-h::after {content: ""; position: absolute; left: 6px; top: 6px; width: 2px; height: 8px;
   border-left: 1.5px solid #07a456; border-right: 1.5px solid #07a456}
-.wvf-win.fixed .wvf-h {display: none}
 .wvf-win-axis {display: flex; justify-content: space-between; font-size: 11px; opacity: .55; margin: 2px 0 0;
   font-variant-numeric: tabular-nums}
 .wvf-win-tip {font-size: 11.5px; opacity: .6; margin-top: 4px}
@@ -225,7 +227,7 @@ function wvfPaint(w) {
   w.querySelector('.wvf-win-val').textContent = `${s.toFixed(1)} – ${e.toFixed(1)} s · ${(e - s).toFixed(1)} s`;
 }
 document.addEventListener('pointerdown', ev => {
-  const w = ev.target.closest('.wvf-win:not(.fixed)');
+  const w = ev.target.closest('.wvf-win');
   if (!w || !ev.target.closest('.wvf-rng')) return;
   ev.preventDefault();
   const rng = w.querySelector('.wvf-rng'), d = +w.dataset.d, max = +w.dataset.max, min = 1;
@@ -336,11 +338,15 @@ def hero_html():
 
 
 def kind_of(verdict):
+    if verdict in FLAG:
+        return 'flag'
     if verdict in OK:
         return 'ok'
-    if verdict in INFO:
-        return 'info'
-    return 'flag'
+    return 'info'
+
+
+def verdict_text(verdict):
+    return VERDICT_TEXT.get(verdict, verdict.replace('_', ' '))
 
 
 def chip(kind, text):
@@ -444,7 +450,7 @@ def finding_html(skill, obs):
     if obs.get('verdict') is None:
         return f'<div class="wvf-finding"><div class="wvf-text">{esc(obs["body"])}</div></div>'
     kind = kind_of(obs['verdict'])
-    parts = [chip(kind, f"{obs['verdict'].replace('_', ' ')} · {obs['confidence']}")]
+    parts = [chip(kind, f"{verdict_text(obs['verdict'])} · {obs['confidence']}")]
     if obs.get('coverage'):
         parts.append(f'<span class="wvf-desc">over {esc(obs["coverage"])}</span>')
     out = f'<div class="wvf-finding"><div class="wvf-head">{" ".join(parts)}</div>'
@@ -475,7 +481,7 @@ def render(record):
         name, desc = TOOLS.get(skill, (skill or 'Model output', ''))
         step_kind = kind_of(obs['verdict']) if obs.get('verdict') else 'info'
         if obs.get('verdict'):
-            chips.append(chip(step_kind, f"{name} · {obs['verdict'].replace('_', ' ')}"))
+            chips.append(chip(step_kind, f"{name} · {verdict_text(obs['verdict'])}"))
         block = (f'<section class="wvf-step {step_kind}" style="animation-delay:{i * .06:.2f}s">'
                  f'<div class="wvf-head"><span class="wvf-num">{i:02d}</span>'
                  f'<span class="wvf-tool">{esc(name)}</span><span class="wvf-scope">{esc(scope_text(step["span"]))}</span>'
@@ -555,10 +561,8 @@ def filmstrip(path, start, length, n=8):
 
 def window_html(duration):
     end = round(min(duration, MAX_SECONDS), 1)
-    fixed = duration <= MAX_SECONDS + 0.05
-    tip = ('The whole clip is analyzed.' if fixed else
-           f'Drag the handles to set the start and end (up to {MAX_SECONDS:.0f} s), or drag the green bar to move it.')
-    return (f'<div class="wvf-win{" fixed" if fixed else ""}" data-d="{duration:.3f}" data-s="0" data-e="{end}" '
+    tip = f'Drag the handles to set the start and end (up to {MAX_SECONDS:.0f} s), or drag the green bar to move it.'
+    return (f'<div class="wvf-win" data-d="{duration:.3f}" data-s="0" data-e="{end}" '
             f'data-max="{MAX_SECONDS:.0f}"><div class="wvf-win-head"><span>Analysis window</span>'
             f'<span class="wvf-win-val">0.0 – {end:.1f} s · {end:.1f} s</span></div>'
             f'<div class="wvf-rng"><div class="wvf-rng-sel" style="left:0;width:{end / duration * 100:.2f}%"></div>'
